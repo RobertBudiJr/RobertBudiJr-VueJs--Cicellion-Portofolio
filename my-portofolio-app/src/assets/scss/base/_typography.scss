@@ -1,0 +1,85 @@
+// Extra Large
+.text-xl-bold {
+  font-family: 'DMSans Bold';
+  font-size: toRem(24);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.text-xl-medium {
+  font-family: 'DMSans Medium';
+  font-size: toRem(24);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.text-xl-regular {
+  font-family: 'DMSans Regular';
+  font-size: toRem(24);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+// Large
+.text-l-bold {
+  font-family: 'DMSans Bold';
+  font-size: toRem(18);
+  line-height: 1.35;
+}
+
+.text-l-regular {
+  font-family: 'DMSans Regular';
+  font-size: toRem(18);
+  line-height: 1.35;
+}
+
+// Medium
+.text-m-bold {
+  font-family: 'DMSans Bold';
+  font-size: toRem(16);
+  line-height: 1.4;
+}
+
+.text-m-medium {
+  font-family: 'DMSans Medium';
+  font-size: toRem(16);
+  line-height: 1.4;
+}
+
+.text-m-regular {
+  font-family: 'DMSans Regular';
+  font-size: toRem(16);
+  line-height: 1.4;
+}
+
+// Small
+.text-s-bold {
+  font-family: 'DMSans Bold';
+  font-size: toRem(14);
+  line-height: 1.4;
+}
+
+.text-s-medium {
+  font-family: 'DMSans Medium';
+  font-size: toRem(14);
+  line-height: 1.4;
+}
+
+.text-s-regular {
+  font-family: 'DMSans Regular';
+  font-size: toRem(14);
+  line-height: 1.4;
+}
+
+// Extra Small
+.text-xs-bold {
+  font-family: 'DMSans Bold';
+  font-size: toRem(12);
+  line-height: auto;
+}
+
+.text-xs-regular {
+  font-family: 'DMSans Regular';
+  font-size: toRem(12);
+  line-height: auto;
+}

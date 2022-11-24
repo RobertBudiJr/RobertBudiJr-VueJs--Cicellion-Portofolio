@@ -1,0 +1,21 @@
+// Mixins
+// Font-face rule with local font file
+// Make sure that you use the right file path within the url() function
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: '#{$name}';
+    src: url('../../media/fonts/#{$file}.eot');
+    src: url('../../media/fonts/#{$file}.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/#{$file}.woff') format('woff'), url('../../media/fonts/#{$file}.ttf') format('truetype'),
+      url('../../media/fonts/#{$file}.svg?#webfont') format('svg');
+  }
+}
+
+// Text shortener
+// It performs truncation on any text that overflows its containing element and adds an ellipsis (…) to the end
+@mixin text-shorten($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
