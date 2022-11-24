@@ -4,10 +4,7 @@
 @charset 'utf-8';
 
 // Variables, functions, mixins, and other configurations
-@import "abstracts/index";
-
-// Bootstrap configuration
-@import "~bootstrap/scss/bootstrap-reboot";
+@import 'abstracts/index';
 
 // Reset file, some typographic rules, and some standard styles for commonly used HTML elements
-@import "base/index";
+@import 'base/index';

@@ -5,9 +5,14 @@ import HeroSection from './sections/HeroSection.vue';
 </script>
 
 <template>
-  <div class="app">
-    <HeroSection />
-  </div>
+  <HeroSection />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import './assets/scss/styles.scss';
+
+#app {
+  background-color: $black;
+  color: $white;
+}
+</style>

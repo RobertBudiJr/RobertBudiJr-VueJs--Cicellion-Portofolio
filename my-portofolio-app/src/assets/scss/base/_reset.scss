@@ -4,10 +4,7 @@
 
 body {
   padding: 0;
-  margin: 0 auto;
-  color: $color-grey;
-  font-family: 'DMSans Regular';
-  overflow-x: hidden;
+  margin: 0 auto !important;
 }
 
 h1,
@@ -20,23 +17,23 @@ p {
 
 h1 {
   font-size: toRem(60);
-  font-family: 'DMSans Bold';
+  font-family: 'Josefin Sans Bold';
   letter-spacing: -0.03em;
   line-height: 1.1;
 
-  @include media-breakpoint-down(sm) {
+  @include breakpoint-down(sm) {
     font-size: toRem(40);
-    line-height: 1.1;
+    line-height: 1.05;
   }
 }
 
 h2 {
   font-size: toRem(48);
-  font-family: 'DMSans Bold';
+  font-family: 'Josefin Sans Bold';
   letter-spacing: -0.03em;
   line-height: 1.05;
 
-  @include media-breakpoint-down(sm) {
+  @include breakpoint-down(sm) {
     font-size: toRem(32);
     line-height: 1;
   }
@@ -44,25 +41,23 @@ h2 {
 
 h3 {
   font-size: toRem(32);
-  font-family: 'DMSans Bold';
+  font-family: 'Josefin Sans Bold';
   letter-spacing: -0.03em;
   line-height: 1.1;
 
-  @include media-breakpoint-down(sm) {
+  @include breakpoint-down(sm) {
     font-size: toRem(24);
-    line-height: 1.1;
   }
 }
 
 h4 {
   font-size: toRem(24);
-  font-family: 'DMSans Bold';
+  font-family: 'Josefin Sans Bold';
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1.1;
 
-  @include media-breakpoint-down(sm) {
+  @include breakpoint-down(sm) {
     font-size: toRem(20);
-    line-height: 1.1;
   }
 }
 
@@ -74,4 +69,16 @@ a {
 .pattern,
 .ornament {
   pointer-events: none;
+}
+
+.container {
+  padding: toRem(80) 0;
+
+  @include breakpoint-down(md) {
+    padding: toRem(64) 0;
+  }
+
+  @include breakpoint-down(sm) {
+    padding-inline: toRem(20);
+  }
 }

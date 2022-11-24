@@ -19,3 +19,21 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $line;
 }
+
+@mixin breakpoint-down($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up-down($bp1, $bp2) {
+  @media (min-width: $bp1) and (max-width: $bp2) {
+    @content;
+  }
+}

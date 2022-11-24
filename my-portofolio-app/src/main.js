@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import './assets/scss/style.scss';
+import './assets/scss/styles.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 
 createApp(App).mount('#app');

@@ -1,85 +1,71 @@
-// Extra Large
-.text-xl-bold {
-  font-family: 'DMSans Bold';
-  font-size: toRem(24);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+.text-gradient-primary {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.text-xl-medium {
-  font-family: 'DMSans Medium';
+.text-xl {
   font-size: toRem(24);
-  line-height: 1.1;
   letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+
+  &--md {
+    font-family: 'Josefin Sans Medium';
+  }
 }
 
-.text-xl-regular {
-  font-family: 'DMSans Regular';
-  font-size: toRem(24);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-}
-
-// Large
-.text-l-bold {
-  font-family: 'DMSans Bold';
+.text-lg {
   font-size: toRem(18);
+  letter-spacing: 0;
   line-height: 1.35;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
 }
 
-.text-l-regular {
-  font-family: 'DMSans Regular';
-  font-size: toRem(18);
-  line-height: 1.35;
-}
-
-// Medium
-.text-m-bold {
-  font-family: 'DMSans Bold';
+.text-md {
   font-size: toRem(16);
+  letter-spacing: 0;
   line-height: 1.4;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+
+  &--md {
+    font-family: 'Josefin Sans Medium';
+  }
 }
 
-.text-m-medium {
-  font-family: 'DMSans Medium';
-  font-size: toRem(16);
-  line-height: 1.4;
-}
-
-.text-m-regular {
-  font-family: 'DMSans Regular';
-  font-size: toRem(16);
-  line-height: 1.4;
-}
-
-// Small
-.text-s-bold {
-  font-family: 'DMSans Bold';
+.text-sm {
   font-size: toRem(14);
+  letter-spacing: 0;
   line-height: 1.4;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+
+  &--md {
+    font-family: 'Josefin Sans Medium';
+  }
 }
 
-.text-s-medium {
-  font-family: 'DMSans Medium';
-  font-size: toRem(14);
-  line-height: 1.4;
-}
-
-.text-s-regular {
-  font-family: 'DMSans Regular';
-  font-size: toRem(14);
-  line-height: 1.4;
-}
-
-// Extra Small
-.text-xs-bold {
-  font-family: 'DMSans Bold';
+.text-xs {
   font-size: toRem(12);
+  letter-spacing: 0;
   line-height: auto;
-}
+  font-family: 'Josefin Sans Regular';
 
-.text-xs-regular {
-  font-family: 'DMSans Regular';
-  font-size: toRem(12);
-  line-height: auto;
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
 }
