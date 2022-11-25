@@ -13,3 +13,14 @@ import ProjectMini from '../components/ProjectMini.vue';
   </section>
   <!-- End Section Projects -->
 </template>
+
+<style lang="scss" scoped>
+@import '../assets/scss/styles.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(64);
+  align-items: center;
+}
+</style>
