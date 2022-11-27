@@ -13,11 +13,11 @@
         </div>
       </div>
       <div class="right">
-        <div class="icon icon--github"></div>
+        <a href="#" class="icon icon--github"></a>
         <div class="line-v-separator"></div>
-        <div class="icon icon--instagram"></div>
+        <a href="#" class="icon icon--instagram"></a>
         <div class="line-v-separator"></div>
-        <div class="icon icon--linkedin"></div>
+        <a href="#" class="icon icon--linkedin"></a>
       </div>
     </div>
   </section>

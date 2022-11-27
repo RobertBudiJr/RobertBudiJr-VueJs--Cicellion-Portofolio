@@ -55,10 +55,10 @@ const projectList = ref([
         <div class="card__text">
           <p class="project-label text-md text-md--md">{{ project.tag }}</p>
           <h4 class="text-gradient-primary">{{ project.name }}</h4>
-          <p class="project-desc text-md">{{ project.desc }}</p>
-          <div class="links">
-            <a href="#" class="text-md text-md--bold text-gradient-primary">Read More</a>
-            <div class="arrow"></div>
+          <p class="project-desc text-sm">{{ project.desc }}</p>
+          <div class="link-wrap">
+            <a href="#" class="card-link card-link--github" data-bs-toggle="tooltip" data-bs-placement="top" title="See github code"></a>
+            <a href="#" class="card-link card-link--link" data-bs-toggle="tooltip" data-bs-placement="top" title="See live server"></a>
           </div>
         </div>
       </div>
@@ -95,6 +95,42 @@ const projectList = ref([
       display: flex;
       flex-direction: column;
       gap: toRem(12);
+    }
+
+    .link-wrap {
+      display: flex;
+      flex-direction: row;
+      gap: toRem(4);
+
+      .card-link {
+        width: 24px;
+        height: 24px;
+        background: $gradient-primary;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        transition: all 0.2s;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+          background: $blue;
+          transform: scale(1.1);
+        }
+
+        &--github {
+          mask-image: url('../assets/img/icons/logo-github.svg');
+          -webkit-mask-image: url('../assets/img/icons/logo-github.svg');
+        }
+
+        &--link {
+          mask-image: url('../assets/img/icons/icon-link.svg');
+          -webkit-mask-image: url('../assets/img/icons/icon-link.svg');
+        }
+      }
     }
   }
 }
