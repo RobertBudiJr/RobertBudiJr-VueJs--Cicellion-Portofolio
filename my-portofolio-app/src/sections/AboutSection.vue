@@ -1,5 +1,6 @@
 <script setup>
 import SkillsLabel from '../components/SkillsLabel.vue';
+import HeaderTitle from '../components/HeaderTitle.vue';
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import SkillsLabel from '../components/SkillsLabel.vue';
     <div class="container">
       <div class="left">
         <div class="left__text">
-          <h2 class="text-underline">About Me</h2>
+          <HeaderTitle titleMsg="About" />
           <div class="img-tablet">
             <img src="../assets/img/prof-pic.png" alt="" />
           </div>

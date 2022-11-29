@@ -4,12 +4,14 @@
 import HeroSection from './sections/HeroSection.vue';
 import AboutSection from './sections/AboutSection.vue';
 import ProjectSection from './sections/ProjectSection.vue';
+import FormSection from './sections/FormSection.vue';
 </script>
 
 <template>
   <HeroSection />
   <AboutSection />
   <ProjectSection />
+  <FormSection />
 </template>
 
 <style lang="scss">

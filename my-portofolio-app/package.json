@@ -11,6 +11,7 @@
   "dependencies": {
     "@vue/compiler-sfc": "^3.2.45",
     "bootstrap": "^5.2.3",
+    "emailjs-com": "^3.2.0",
     "vue": "^3.2.41"
   },
   "devDependencies": {

@@ -78,6 +78,22 @@ const projectList = ref([
     border-radius: 10px;
     overflow: hidden;
     background: transparent;
+    transition: all 0.2s;
+    cursor: default;
+
+    &:hover {
+      .card__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      .card__text {
+        h4 {
+          color: $blue;
+        }
+      }
+    }
 
     .card__img {
       max-height: 351px;
@@ -87,6 +103,7 @@ const projectList = ref([
       img {
         width: 100%;
         height: auto;
+        transition: all 0.2s;
       }
     }
 
