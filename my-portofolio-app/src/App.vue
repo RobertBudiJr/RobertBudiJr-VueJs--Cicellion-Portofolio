@@ -5,6 +5,7 @@ import HeroSection from './sections/HeroSection.vue';
 import AboutSection from './sections/AboutSection.vue';
 import ProjectSection from './sections/ProjectSection.vue';
 import FormSection from './sections/FormSection.vue';
+import FooterSection from './sections/FooterSection.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import FormSection from './sections/FormSection.vue';
   <AboutSection />
   <ProjectSection />
   <FormSection />
+  <FooterSection />
 </template>
 
 <style lang="scss">
