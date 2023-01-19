@@ -5,12 +5,16 @@ defineProps({
   skill: String,
 });
 
-const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { name: 'JavaScript' }, { name: 'Vue JS' }, { name: 'JQuery' }]);
+const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { name: 'JavaScript' }, { name: 'Vue JS' }, { name: 'JQuery' }, { name: 'Java' }, { name: 'Git' }]);
 </script>
 
 <template>
-  <div class="label-wrap">
-    <div class="label label--skills text-sm text-sm--md" v-for="skill in skillList" v-bind:key="skill.name">{{ skill.name }}</div>
+  <div class="row gx-1 gy-1 label-wrap">
+    <div class="col-md-3" v-for="skill in skillList" v-bind:key="skill.name">
+      <div class="label label--skills text-sm text-sm--md">
+        {{ skill.name }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,22 +22,16 @@ const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { n
 @import '../assets/scss/styles.scss';
 
 .label-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: toRem(16);
-
-  @include media-breakpoint-down(md) {
-    align-items: center;
-    justify-content: center;
-  }
+  --bs-gutter-x: 24px !important;
+  --bs-gutter-y: 24px !important;
 
   .label--skills {
     padding: toRem(4) toRem(8);
-    color: $black;
+    color: $subtext;
     border-radius: 5px;
-    background: $gradient-secondary;
-    width: fit-content;
+    background: $gradient-primary-thin;
     cursor: default;
+    text-align: center;
   }
 }
 </style>

@@ -1,15 +1,17 @@
 <template>
   <!-- Start Hero Section -->
-  <section class="hero">
+  <section class="hero" id="heroSection">
     <div class="container">
       <div class="left">
-        <h1>Hello! I am <span class="text-gradient-primary">Cicellion</span></h1>
-        <p class="text-lg">Front End Developer</p>
+        <div class="text">
+          <h1>Hello! I am <span class="text-gradient-primary">Cicellion</span></h1>
+          <p class="text-lg">Front End Developer</p>
+        </div>
         <div class="btn-container">
-          <button class="btn btn--primary btn--md">See What I Do</button>
-          <button class="btn btn--tertiary btn--md">
-            <p>Say Hello</p>
-          </button>
+          <a href="#aboutSection" class="btn btn--primary btn--md">See What I Do</a>
+          <a href="#contactSection" class="btn btn--tertiary btn--md">
+            <p>Contact</p>
+          </a>
         </div>
       </div>
       <div class="right">
@@ -42,11 +44,17 @@
   .left {
     display: flex;
     flex-direction: column;
-    gap: toRem(20);
+    gap: toRem(32);
     align-items: flex-start;
 
     @include media-breakpoint-down(md) {
       align-items: center;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(8);
     }
 
     .btn-container {

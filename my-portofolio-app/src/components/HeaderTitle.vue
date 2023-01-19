@@ -3,5 +3,5 @@ defineProps(['titleMsg']);
 </script>
 
 <template>
-  <h2 class="text-underline">{{ titleMsg }}</h2>
+  <h2>{{ titleMsg }}</h2>
 </template>

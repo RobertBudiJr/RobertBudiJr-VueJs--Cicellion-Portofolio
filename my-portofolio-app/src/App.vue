@@ -3,6 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HeroSection from './sections/HeroSection.vue';
 import AboutSection from './sections/AboutSection.vue';
+import SkillsSection from './sections/SkillsSection.vue';
 import ProjectSection from './sections/ProjectSection.vue';
 import FormSection from './sections/FormSection.vue';
 import FooterSection from './sections/FooterSection.vue';
@@ -11,6 +12,7 @@ import FooterSection from './sections/FooterSection.vue';
 <template>
   <HeroSection />
   <AboutSection />
+  <SkillsSection />
   <ProjectSection />
   <FormSection />
   <FooterSection />
@@ -22,10 +24,16 @@ import FooterSection from './sections/FooterSection.vue';
 #app {
   background-color: $black;
   color: $white;
-  padding-top: toRem(80);
+  // padding-top: toRem(80);
 
-  @include media-breakpoint-down(md) {
-    padding-top: toRem(64);
+  // @include media-breakpoint-down(md) {
+  //   padding-top: toRem(64);
+  // }
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
   }
 }
 </style>

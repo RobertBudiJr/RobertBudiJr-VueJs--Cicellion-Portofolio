@@ -13,14 +13,14 @@
   gap: 4px;
 
   &--primary {
-    background: $gradient-primary;
+    background: $blue;
     color: $white;
     transition: 0.2s;
 
     &:hover,
     &:active {
       color: $white;
-      background: $blue;
+      background: $dark-blue;
     }
   }
 
@@ -50,7 +50,7 @@
     &:hover {
       border: none;
       background: none;
-      background: $blue;
+      background: $dark-blue;
 
       p {
         color: $white;
@@ -72,10 +72,11 @@
     border: 1px solid $white;
 
     &:hover {
-      border: 1px solid transparent;
-      background-image: none;
-      background-color: $blue;
-      color: $white;
+      border: 1px solid $dark-blue;
+
+      p {
+        color: $dark-blue;
+      }
     }
   }
 

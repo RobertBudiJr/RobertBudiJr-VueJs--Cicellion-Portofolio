@@ -5,19 +5,20 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 
 <template>
   <!-- Start About Section -->
-  <section class="about">
+  <section class="about" id="aboutSection">
     <div class="container">
       <div class="left">
         <div class="left__text">
-          <HeaderTitle titleMsg="About" />
+          <HeaderTitle titleMsg="About Me" />
           <div class="img-tablet">
             <img src="../assets/img/prof-pic.png" alt="" />
           </div>
           <p class="text-lg">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
         </div>
-        <div class="left__skill-label">
+        <a href="#" class="btn btn--primary btn--md left__btn">Check My CV</a>
+        <!-- <div class="left__skill-label">
           <SkillsLabel />
-        </div>
+        </div> -->
       </div>
 
       <div class="right">
@@ -57,7 +58,7 @@ import HeaderTitle from '../components/HeaderTitle.vue';
     &__text {
       display: flex;
       flex-direction: column;
-      gap: toRem(32);
+      gap: toRem(16);
 
       @include media-breakpoint-down(md) {
         gap: toRem(56);
@@ -77,9 +78,19 @@ import HeaderTitle from '../components/HeaderTitle.vue';
         }
       }
     }
+
+    &__btn {
+      width: fit-content;
+    }
   }
 
   .right {
+    img {
+      width: 400px;
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+    }
+
     @include media-breakpoint-down(md) {
       display: none;
     }
