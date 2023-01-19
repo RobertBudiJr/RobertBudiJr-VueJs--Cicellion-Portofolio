@@ -49,7 +49,7 @@ export default {
 form {
   max-width: 480px;
   width: 100%;
-  padding: toRem(64) toRem(40);
+  padding: toRem(40);
   display: flex;
   flex-direction: column;
   gap: toRem(40);
@@ -81,7 +81,7 @@ form {
 
       .form-control {
         padding: toRem(16) toRem(24);
-        background: linear-gradient($black 0 0) padding-box, $gradient-primary border-box;
+        background: rgba($blue, $alpha: 0.1);
         border-radius: 10px;
         border: 1px solid transparent;
         color: $white;

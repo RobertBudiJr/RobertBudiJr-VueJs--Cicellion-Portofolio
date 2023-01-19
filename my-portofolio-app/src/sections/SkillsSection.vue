@@ -6,10 +6,15 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 <template>
   <!-- Start Skills Section -->
   <section class="skills" id="skillsSection">
+    <!-- Pattern Group -->
+    <div class="pattern">
+      <div class="ornament ornament__ellipse-1"></div>
+    </div>
+
     <div class="container">
-      <div class="text">
+      <div class="header">
         <HeaderTitle titleMsg="Skills"></HeaderTitle>
-        <p class="text-lg">I am proficient and open to several programming languages, these are some of the ones I use the most.</p>
+        <p class="text-md">I am proficient and open to several programming languages, these are some of the ones I use the most.</p>
       </div>
       <SkillsLabel />
     </div>
@@ -22,20 +27,23 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 section.skills#skillsSection {
   height: auto;
 
+  // Pattern Settings
+  .pattern {
+    .ornament__ellipse-1 {
+      width: 373px;
+      height: 373px;
+      left: 1239px;
+      top: -135px;
+
+      background: #0354e2;
+    }
+  }
+
   .container {
     padding: toRem(80) 0;
     display: flex;
     flex-direction: column;
     gap: toRem(32);
-
-    .text {
-      display: flex;
-      flex-direction: column;
-      gap: toRem(16);
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
   }
 }
 </style>

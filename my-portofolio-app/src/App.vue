@@ -24,16 +24,14 @@ import FooterSection from './sections/FooterSection.vue';
 #app {
   background-color: $black;
   color: $white;
-  // padding-top: toRem(80);
 
-  // @include media-breakpoint-down(md) {
-  //   padding-top: toRem(64);
-  // }
   section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 800px;
+    position: relative;
+    z-index: 1;
   }
 }
 </style>

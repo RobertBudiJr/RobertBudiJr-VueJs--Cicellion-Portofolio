@@ -6,6 +6,11 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 <template>
   <!-- Start About Section -->
   <section class="about" id="aboutSection">
+    <!-- Pattern Group -->
+    <div class="pattern">
+      <div class="ornament ornament__ellipse-1"></div>
+    </div>
+
     <div class="container">
       <div class="left">
         <div class="left__text">
@@ -13,7 +18,7 @@ import HeaderTitle from '../components/HeaderTitle.vue';
           <div class="img-tablet">
             <img src="../assets/img/prof-pic.png" alt="" />
           </div>
-          <p class="text-lg">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
+          <p class="text-md">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
         </div>
         <a href="#" class="btn btn--primary btn--md left__btn">Check My CV</a>
         <!-- <div class="left__skill-label">
@@ -31,6 +36,16 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 
 <style lang="scss" scoped>
 @import '../assets/scss/styles.scss';
+// Pattern Settings
+.pattern {
+  .ornament__ellipse-1 {
+    width: 580px;
+    height: 580px;
+    left: -290px;
+    top: 46px;
+    background: #5d008a;
+  }
+}
 .container {
   display: flex;
   justify-content: space-between;

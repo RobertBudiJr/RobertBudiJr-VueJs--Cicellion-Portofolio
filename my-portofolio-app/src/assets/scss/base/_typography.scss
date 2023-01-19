@@ -4,21 +4,6 @@
   color: transparent;
 }
 
-.text-underline {
-  position: relative;
-  width: fit-content;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    height: 2px;
-    background: $gradient-secondary;
-  }
-}
-
 .text-xl {
   font-size: toRem(24);
   letter-spacing: -0.03em;

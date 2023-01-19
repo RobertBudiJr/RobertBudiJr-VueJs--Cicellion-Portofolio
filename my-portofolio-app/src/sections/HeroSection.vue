@@ -1,6 +1,12 @@
 <template>
   <!-- Start Hero Section -->
   <section class="hero" id="heroSection">
+    <!-- Pattern Group -->
+    <div class="pattern">
+      <div class="ornament ornament__ellipse-1"></div>
+      <div class="ornament ornament__ellipse-2"></div>
+    </div>
+
     <div class="container">
       <div class="left">
         <div class="text">
@@ -15,11 +21,11 @@
         </div>
       </div>
       <div class="right">
-        <a href="#" class="icon icon--github"></a>
+        <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></a>
         <div class="line-v-separator"></div>
-        <a href="#" class="icon icon--instagram"></a>
+        <a href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></a>
         <div class="line-v-separator"></div>
-        <a href="#" class="icon icon--linkedin"></a>
+        <a href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></a>
       </div>
     </div>
   </section>
@@ -28,6 +34,25 @@
 
 <style lang="scss" scoped>
 @import '../assets/scss/styles.scss';
+
+// Pattern Settings
+.pattern {
+  .ornament__ellipse-1 {
+    width: 497px;
+    height: 497px;
+    left: -242px;
+    top: -248px;
+    background: #5d008a;
+  }
+
+  .ornament__ellipse-2 {
+    width: 784px;
+    height: 784px;
+    left: 1048px;
+    top: calc(50% - 784px / 2);
+    background: #0354e2;
+  }
+}
 .container {
   display: flex;
   flex-direction: row;

@@ -10,7 +10,7 @@ const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { n
 
 <template>
   <div class="row gx-1 gy-1 label-wrap">
-    <div class="col-md-3" v-for="skill in skillList" v-bind:key="skill.name">
+    <div class="col-lg-3 col-md-6" v-for="skill in skillList" v-bind:key="skill.name">
       <div class="label label--skills text-sm text-sm--md">
         {{ skill.name }}
       </div>
@@ -24,6 +24,7 @@ const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { n
 .label-wrap {
   --bs-gutter-x: 24px !important;
   --bs-gutter-y: 24px !important;
+  padding: 0 toRem(80);
 
   .label--skills {
     padding: toRem(4) toRem(8);

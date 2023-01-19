@@ -6,6 +6,11 @@ import ContactForm from '../components/ContactForm.vue';
 <template>
   <!-- Start Form Section -->
   <section class="form">
+    <!-- Pattern Group -->
+    <div class="pattern">
+      <div class="ornament ornament__ellipse-1"></div>
+    </div>
+
     <div class="container">
       <div class="header">
         <HeaderTitle titleMsg="Contact Me" />
@@ -19,6 +24,16 @@ import ContactForm from '../components/ContactForm.vue';
 
 <style lang="scss" scoped>
 @import '../assets/scss/styles.scss';
+// Pattern Settings
+.pattern {
+  .ornament__ellipse-1 {
+    width: 581px;
+    height: 581px;
+    left: 1068px;
+    top: 348px;
+    background: #5d008a;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
