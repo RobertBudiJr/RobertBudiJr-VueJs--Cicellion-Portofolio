@@ -10,23 +10,27 @@ const projectList = ref([
   {
     img: './src/assets/img/Project1.png',
     name: 'Kuliwisata.id',
-    desc: 'Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas..',
+    desc: 'Kuliwisata.id is a web application which function is to explore culinary and tourism in Bali, Indonesia. Made by native HTML, CSS, and JS.',
+    url: 'https://github.com/RobertBudiJr/Kuliwisata.id',
   },
   {
     img: './src/assets/img/Project2.png',
     name: 'Ingfo.id',
-    desc: 'Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas..',
+    desc: 'Ingfo.id is an web application which main function is to provide information about Coivd-19 vaccinations. Made by native HTML, CSS, and JS.',
+    url: 'https://github.com/RobertBudiJr/ingfo.id',
   },
 ]);
 
 const projectList2 = ref([
   {
-    name: 'City Specialties App',
-    desc: 'Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas..',
+    name: 'Natours',
+    desc: 'Natours is a web application about tour booking. This app is made as study case to learn Saas, HTML, and JS. And to practice various amazing hover effects.',
+    url: 'https://github.com/RobertBudiJr/LatFrontEnd-Natours',
   },
   {
     name: 'Meme Generator',
-    desc: 'Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas..',
+    desc: 'Based on its name, Meme Generator is a web application which generate meme randomly based on data i provide. Made by React JS as study case.',
+    url: 'https://github.com/RobertBudiJr/ReactJs-ThirdProject',
   },
 ]);
 </script>
@@ -41,7 +45,7 @@ const projectList2 = ref([
             <p class="text-md">{{ project.desc }}</p>
           </div>
           <div class="left__btn">
-            <a :href="project.url" class="btn btn--sm btn--tertiary">
+            <a :href="project.url" class="btn btn--sm btn--tertiary" target="_blank">
               <p>Source Code</p>
             </a>
           </div>
@@ -59,7 +63,7 @@ const projectList2 = ref([
           <p class="text-md">{{ project2.desc }}</p>
         </div>
         <div class="btn-wrap">
-          <a :href="project2.url" class="btn btn--sm btn--tertiary">
+          <a :href="project2.url" class="btn btn--sm btn--tertiary" target="_blank">
             <p>Source Code</p>
           </a>
         </div>
@@ -90,12 +94,25 @@ const projectList2 = ref([
       flex-direction: row;
       align-items: center;
 
+      @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+        justify-content: unset;
+      }
+
       .left {
         width: 40%;
         display: flex;
         flex-direction: column;
         gap: toRem(24);
         padding: toRem(24);
+
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+        }
+
+        @include media-breakpoint-down(lg) {
+          padding: toRem(0);
+        }
 
         &__text {
           display: flex;
@@ -105,6 +122,10 @@ const projectList2 = ref([
 
         &__btn {
           width: fit-content;
+
+          @include media-breakpoint-down(xs-2) {
+            width: 100%;
+          }
         }
       }
       .right {
@@ -113,6 +134,17 @@ const projectList2 = ref([
         overflow: hidden;
         margin-top: -24px;
         margin-bottom: -24px;
+
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
 
         img {
           width: auto;
@@ -132,12 +164,23 @@ const projectList2 = ref([
         flex-direction: column;
         gap: toRem(16);
       }
+
+      .btn-wrap {
+        @include media-breakpoint-down(xs-2) {
+          width: 100%;
+        }
+      }
     }
   }
 
   :nth-child(2) {
     > * {
       flex-direction: row-reverse;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+        justify-content: unset;
+      }
     }
   }
 }

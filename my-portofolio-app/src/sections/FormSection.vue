@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm.vue';
 
 <template>
   <!-- Start Form Section -->
-  <section class="form">
+  <section class="form" id="formSection">
     <!-- Pattern Group -->
     <div class="pattern">
       <div class="ornament ornament__ellipse-1"></div>

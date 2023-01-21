@@ -32,6 +32,11 @@ import FooterSection from './sections/FooterSection.vue';
     height: 800px;
     position: relative;
     z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      padding: toRem(56) toRem(20);
+    }
   }
 }
 </style>

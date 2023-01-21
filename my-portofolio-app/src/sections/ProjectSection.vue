@@ -17,9 +17,9 @@ import ProjectMini from '../components/ProjectMini.vue';
         <p class="text-md">These are some samples of the work I've done so far.</p>
       </div>
       <ProjectMini />
-      <button class="btn btn--md btn--tertiary">
+      <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="btn btn--md btn--tertiary" target="_blank">
         <p>See More</p>
-      </button>
+      </a>
     </div>
   </section>
   <!-- End Section Projects -->
@@ -30,6 +30,10 @@ import ProjectMini from '../components/ProjectMini.vue';
 
 section.projects#projectSection {
   height: 1338px;
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+  }
   // Pattern Settings
   .pattern {
     .ornament__ellipse-1 {
@@ -45,6 +49,12 @@ section.projects#projectSection {
     flex-direction: column;
     gap: toRem(32);
     align-items: center;
+
+    .btn {
+      @include media-breakpoint-down(xs-2) {
+        width: 100%;
+      }
+    }
   }
 }
 </style>

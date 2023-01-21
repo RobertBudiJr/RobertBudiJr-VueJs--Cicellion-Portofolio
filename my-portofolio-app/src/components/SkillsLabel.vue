@@ -5,7 +5,7 @@ defineProps({
   skill: String,
 });
 
-const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { name: 'JavaScript' }, { name: 'Vue JS' }, { name: 'JQuery' }, { name: 'Java' }, { name: 'Git' }]);
+const skillList = ref([{ name: 'Vue JS' }, { name: 'HTML5' }, { name: 'CSS' }, { name: 'JavaScript' }, { name: 'Sass' }, { name: 'JQuery' }, { name: 'Git' }, { name: 'Java' }]);
 </script>
 
 <template>
@@ -25,6 +25,10 @@ const skillList = ref([{ name: 'Sass' }, { name: 'HTML5' }, { name: 'CSS' }, { n
   --bs-gutter-x: 24px !important;
   --bs-gutter-y: 24px !important;
   padding: 0 toRem(80);
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
 
   .label--skills {
     padding: toRem(4) toRem(8);

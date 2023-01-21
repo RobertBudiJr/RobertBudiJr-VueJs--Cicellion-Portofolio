@@ -15,7 +15,7 @@
         </div>
         <div class="btn-container">
           <a href="#aboutSection" class="btn btn--primary btn--md">See What I Do</a>
-          <a href="#contactSection" class="btn btn--tertiary btn--md">
+          <a href="#formSection" class="btn btn--tertiary btn--md">
             <p>Contact</p>
           </a>
         </div>
@@ -64,6 +64,10 @@
     justify-content: center;
     gap: toRem(56);
     text-align: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: toRem(80);
   }
 
   .left {

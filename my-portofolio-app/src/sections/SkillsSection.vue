@@ -44,6 +44,10 @@ section.skills#skillsSection {
     display: flex;
     flex-direction: column;
     gap: toRem(32);
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
   }
 }
 </style>

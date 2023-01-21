@@ -6,19 +6,19 @@
         <div class="col-lg-4 col-sm-6 item item--lg">
           <div class="text-wrap item">
             <h1>Cicellion.</h1>
-            <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ut id nisl tellus rhoncus, imperdiet</p>
+            <p class="text-md">This website is still under development, sorry for the inconvenience while experiencing this website.</p>
           </div>
           <div class="socials">
-            <a href="#" class="icon icon--github"></a>
-            <a href="#" class="icon icon--instagram"></a>
-            <a href="#" class="icon icon--linkedin"></a>
+            <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></a>
+            <a href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></a>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 item">
           <p class="text-lg text-lg-bold">This website was made by :</p>
-          <a href="#" class="text-md">Vue JS</a>
-          <a href="#" class="text-md">Vite JS</a>
-          <a href="#" class="text-md">Email JS</a>
+          <a href="https://vuejs.org" class="text-md" target="_blank">Vue JS</a>
+          <a href="https://vitejs.dev" class="text-md" target="_blank">Vite JS</a>
+          <a href="https://dashboard.emailjs.com/" class="text-md" target="_blank">Email JS</a>
         </div>
         <div class="col-lg-4 col-sm-6 item">
           <p class="text-lg text-lg-bold">See my other portofolio as :</p>
@@ -47,6 +47,10 @@ section.footer#footerSection {
     align-items: center;
     padding: toRem(80) 0;
 
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+
     .footer__content {
       --bs-gutter-x: 16px;
       --bs-gutter-y: 32px;
@@ -57,6 +61,12 @@ section.footer#footerSection {
         flex-direction: column;
         gap: toRem(16);
 
+        @include media-breakpoint-down(sm) {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
         &--lg {
           gap: toRem(20);
         }
@@ -66,6 +76,10 @@ section.footer#footerSection {
           gap: toRem(20);
           justify-content: center;
           align-self: flex-start;
+
+          @include media-breakpoint-down(sm) {
+            align-self: center;
+          }
 
           .icon {
             width: 32px;
@@ -123,6 +137,10 @@ section.footer#footerSection {
       align-items: center;
       flex-direction: column;
       gap: toRem(20);
+
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
 
       &:before {
         display: block;

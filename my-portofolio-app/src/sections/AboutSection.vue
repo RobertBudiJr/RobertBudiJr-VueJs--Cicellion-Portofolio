@@ -16,18 +16,15 @@ import HeaderTitle from '../components/HeaderTitle.vue';
         <div class="left__text">
           <HeaderTitle titleMsg="About Me" />
           <div class="img-tablet">
-            <img src="../assets/img/prof-pic.png" alt="" />
+            <img src="../assets/img/prof-pic.jpg" alt="" />
           </div>
           <p class="text-md">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
         </div>
         <a href="#" class="btn btn--primary btn--md left__btn">Check My CV</a>
-        <!-- <div class="left__skill-label">
-          <SkillsLabel />
-        </div> -->
       </div>
 
       <div class="right">
-        <img src="../assets/img/prof-pic.png" alt="" />
+        <img src="../assets/img/prof-pic.jpg" alt="" />
       </div>
     </div>
   </section>
@@ -68,6 +65,8 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 
     @include media-breakpoint-down(md) {
       max-width: 100%;
+      align-items: center;
+      text-align: center;
     }
 
     &__text {
@@ -78,6 +77,10 @@ import HeaderTitle from '../components/HeaderTitle.vue';
       @include media-breakpoint-down(md) {
         gap: toRem(56);
         align-items: center;
+      }
+
+      @include media-breakpoint-down(xs-2) {
+        gap: toRem(32);
       }
 
       .img-tablet {
@@ -96,14 +99,25 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 
     &__btn {
       width: fit-content;
+
+      @include media-breakpoint-down(xs-2) {
+        width: 100%;
+      }
     }
   }
 
   .right {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     img {
-      width: 400px;
-      aspect-ratio: 1/1;
-      border-radius: 8px;
+      width: auto;
+      height: 400px;
     }
 
     @include media-breakpoint-down(md) {
