@@ -26,20 +26,20 @@ export default {
 <template>
   <form autocomplete="off" ref="form" @submit.prevent="sendEmail">
     <div class="input-group">
-      <div class="form-group">
+      <div class="form-group" v-motion-fade-visible-once>
         <label for="nameInput" class="form-label text-md">Full Name</label>
         <input type="text" class="form-control" name="user_name" id="nameInput" placeholder="John Doe" required />
       </div>
-      <div class="form-group">
+      <div class="form-group" v-motion-fade-visible-once>
         <label for="emailInput" class="form-label text-md">Email</label>
         <input type="text" name="email" class="form-control" id="emailInput" placeholder="JohnDoe@mail.com" required />
       </div>
-      <div class="form-group">
+      <div class="form-group" v-motion-fade-visible-once>
         <label for="msgInput" class="form-label text-md">Message</label>
         <textarea type="text" name="message" class="form-control" id="msgInput" rows="3" required></textarea>
       </div>
     </div>
-    <input type="submit" class="btn btn--primary btn--md" value="Send Message" />
+    <input type="submit" class="btn btn--primary btn--md" value="Send Message" v-motion-slide-visible-once-bottom />
   </form>
 </template>
 

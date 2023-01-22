@@ -14,10 +14,10 @@ import ProjectMini from '../components/ProjectMini.vue';
     <div class="container">
       <div class="header">
         <HeaderTitle titleMsg="Projects" />
-        <p class="text-md">These are some samples of the work I've done so far.</p>
+        <p class="text-md" v-motion-slide-visible-once-top>These are some samples of the work I've done so far.</p>
       </div>
       <ProjectMini />
-      <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="btn btn--md btn--tertiary" target="_blank">
+      <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="btn btn--md btn--tertiary" target="_blank" v-motion-slide-visible-once-bottom>
         <p>See More</p>
       </a>
     </div>

@@ -38,7 +38,7 @@ const projectList2 = ref([
 <template>
   <div class="row g-1 project-list">
     <div class="col-md-12" v-for="project in projectList" v-bind:key="project.id">
-      <div class="card card--big">
+      <div class="card card--big" v-motion-fade-visible>
         <div class="left">
           <div class="left__text">
             <h3>{{ project.name }}</h3>
@@ -57,7 +57,7 @@ const projectList2 = ref([
       </div>
     </div>
     <div class="col-md-6" v-for="project2 in projectList2" v-bind:key="project2.id">
-      <div class="card card--small">
+      <div class="card card--small" v-motion-fade-visible>
         <div class="text">
           <h3>{{ project2.name }}</h3>
           <p class="text-md">{{ project2.desc }}</p>

@@ -8,7 +8,7 @@
     </div>
 
     <div class="container">
-      <div class="left">
+      <div class="left" v-motion-slide-left>
         <div class="text">
           <h1>Hello! I am <span class="text-gradient-primary">Cicellion</span></h1>
           <p class="text-lg">Front End Developer</p>
@@ -20,7 +20,7 @@
           </a>
         </div>
       </div>
-      <div class="right">
+      <div class="right" v-motion-slide-right>
         <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></a>
         <div class="line-v-separator"></div>
         <a href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></a>

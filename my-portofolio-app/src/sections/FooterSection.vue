@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row g-1 footer__content">
         <div class="col-lg-4 col-sm-6 item item--lg">
-          <div class="text-wrap item">
+          <div class="text-wrap item" v-motion-fade-visible-once>
             <h1>Cicellion.</h1>
             <p class="text-md">This website is still under development, sorry for the inconvenience while experiencing this website.</p>
           </div>
@@ -14,18 +14,18 @@
             <a href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></a>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 item">
+        <div class="col-lg-4 col-sm-6 item" v-motion-fade-visible-once>
           <p class="text-lg text-lg-bold">This website was made by :</p>
           <a href="https://vuejs.org" class="text-md" target="_blank">Vue JS</a>
           <a href="https://vitejs.dev" class="text-md" target="_blank">Vite JS</a>
           <a href="https://dashboard.emailjs.com/" class="text-md" target="_blank">Email JS</a>
         </div>
-        <div class="col-lg-4 col-sm-6 item">
+        <div class="col-lg-4 col-sm-6 item" v-motion-fade-visible-once>
           <p class="text-lg text-lg-bold">See my other portofolio as :</p>
           <a href="#" class="text-md">Digital Artist</a>
         </div>
       </div>
-      <div class="footer__copyright">
+      <div class="footer__copyright" v-motion-pop-visible>
         <p class="text-md">&copy; Copyright 2022, All Rights Reserved by Cicellion</p>
       </div>
     </div>

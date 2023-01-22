@@ -13,18 +13,18 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 
     <div class="container">
       <div class="left">
-        <div class="left__text">
+        <div class="left__text" v-motion-slide-visible-once-left>
           <HeaderTitle titleMsg="About Me" />
           <div class="img-tablet">
             <img src="../assets/img/prof-pic.jpg" alt="" />
           </div>
           <p class="text-md">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
         </div>
-        <a href="#" class="btn btn--primary btn--md left__btn">Check My CV</a>
+        <a href="#" class="btn btn--primary btn--md left__btn" v-motion-slide-visible-once-bottom>Check My CV</a>
       </div>
 
       <div class="right">
-        <img src="../assets/img/prof-pic.jpg" alt="" />
+        <img src="../assets/img/prof-pic.jpg" alt="" v-motion-slide-visible-once-right />
       </div>
     </div>
   </section>

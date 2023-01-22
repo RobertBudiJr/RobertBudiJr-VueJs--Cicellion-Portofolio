@@ -11,7 +11,7 @@ const skillList = ref([{ name: 'Vue JS' }, { name: 'HTML5' }, { name: 'CSS' }, {
 <template>
   <div class="row gx-1 gy-1 label-wrap">
     <div class="col-lg-3 col-md-6" v-for="skill in skillList" v-bind:key="skill.name">
-      <div class="label label--skills text-sm text-sm--md">
+      <div class="label label--skills text-sm text-sm--md" v-motion-pop-visible>
         {{ skill.name }}
       </div>
     </div>

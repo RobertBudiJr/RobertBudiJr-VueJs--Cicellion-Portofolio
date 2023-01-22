@@ -43,5 +43,6 @@ $lighter-green: #edfffc;
 
 // Gradient Variables
 $gradient-primary: linear-gradient(112.8deg, $dark-purple, $blue);
+$gradient-primary-text: linear-gradient(112.8deg, $dark-purple, $blue, $dark-purple);
 $gradient-primary-thin: linear-gradient(112.8deg, rgba(135, 17, 193, 0.3) -15.76%, rgba(36, 114, 252, 0.3) 102.86%, rgba(36, 114, 252, 0.3) 102.86%);
 $gradient-secondary: linear-gradient(52.37deg, $light-green, $green);

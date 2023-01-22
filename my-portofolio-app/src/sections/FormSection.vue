@@ -14,7 +14,7 @@ import ContactForm from '../components/ContactForm.vue';
     <div class="container">
       <div class="header">
         <HeaderTitle titleMsg="Contact Me" />
-        <p class="text-lg">I’d love to hear a message from you, reach out!</p>
+        <p class="text-lg" v-motion-pop-visible-once>I’d love to hear a message from you, reach out!</p>
       </div>
       <ContactForm />
     </div>

@@ -3,5 +3,5 @@ defineProps(['titleMsg']);
 </script>
 
 <template>
-  <h2>{{ titleMsg }}</h2>
+  <h2 v-motion-slide-visible-once-top>{{ titleMsg }}</h2>
 </template>

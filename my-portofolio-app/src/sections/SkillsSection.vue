@@ -14,7 +14,7 @@ import HeaderTitle from '../components/HeaderTitle.vue';
     <div class="container">
       <div class="header">
         <HeaderTitle titleMsg="Skills"></HeaderTitle>
-        <p class="text-md">I am proficient and open to several programming languages, these are some of the ones I use the most.</p>
+        <p class="text-md" v-motion-slide-visible-once-top>I am proficient and open to several programming languages, these are some of the ones I use the most.</p>
       </div>
       <SkillsLabel />
     </div>

@@ -1,7 +1,10 @@
 .text-gradient-primary {
-  background: $gradient-primary;
+  background: $gradient-primary-text;
   -webkit-background-clip: text;
   color: transparent;
+  background-size: 200%;
+
+  animation: gradient-shine 3s linear infinite;
 }
 
 .text-xl {
