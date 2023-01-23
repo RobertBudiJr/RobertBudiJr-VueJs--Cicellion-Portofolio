@@ -20,7 +20,7 @@ import HeaderTitle from '../components/HeaderTitle.vue';
           </div>
           <p class="text-md">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
         </div>
-        <a href="#" class="btn btn--primary btn--md left__btn" v-motion-slide-visible-once-bottom>Check My CV</a>
+        <a href="https://drive.google.com/file/d/1xUFNCAn7fC3WXRLXF3fTcQ3RbONHlmwe/view?usp=sharing" class="btn btn--primary btn--md left__btn" target="_blank" v-motion-slide-visible-once-bottom>Check My CV</a>
       </div>
 
       <div class="right">
