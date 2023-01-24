@@ -70,6 +70,11 @@ const projectList2 = ref([
       </div>
     </div>
   </div>
+
+  <div class="hidden" style="display: none">
+    <img src="../assets/img/project1.png" alt="" />
+    <img src="../assets/img/project2.png" alt="" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
