@@ -1,0 +1,48 @@
+// Variables
+$grid-breakpoints: (
+  xs: 0,
+  xs-1: 320px,
+  xs-2: 426px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Color Variables
+$dark-purple: #8711c1;
+$purple: #b849ef;
+$light-purple: #ffddff;
+
+$dark-blue: #0344b7;
+$blue: #2472fc;
+$light-blue: #d6ffff;
+
+$dark-deep-blue: #023185;
+$deep-blue: #1b4a9e;
+$light-deep-blue: #4e7dd1;
+
+$black: #191f29;
+$grey: #989ea8;
+$subtext: #cfcfcf;
+$white: #ffffff;
+
+$dark-yellow: #b77603;
+$yellow: #fcae24;
+$light-yellow: #fffff0;
+
+$dark-red: #b72e03;
+$red: #fc5824;
+$light-red: #fff1ed;
+
+$dark-green: #03b79b;
+$green: #24fcda;
+$light-green: #24fc84;
+$lighter-green: #edfffc;
+
+// Gradient Variables
+$gradient-primary: linear-gradient(112.8deg, $dark-purple, $blue);
+$gradient-primary-text: linear-gradient(112.8deg, $dark-purple, $blue, $dark-purple);
+$gradient-primary-thin: linear-gradient(112.8deg, rgba(135, 17, 193, 0.3) -15.76%, rgba(36, 114, 252, 0.3) 102.86%, rgba(36, 114, 252, 0.3) 102.86%);
+$gradient-secondary: linear-gradient(52.37deg, $light-green, $green);

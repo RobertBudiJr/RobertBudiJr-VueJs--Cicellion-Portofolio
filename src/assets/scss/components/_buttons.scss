@@ -1,0 +1,98 @@
+.btn {
+  border-radius: toRem(10);
+  text-decoration: none;
+  border: none;
+  transition: 0.2s;
+  font-family: 'Josefin Sans Bold';
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  &--primary {
+    background: $blue;
+    color: $white;
+    transition: 0.2s;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background: $dark-blue;
+    }
+  }
+
+  &--secondary {
+    position: relative;
+    transition: all 0.2s;
+
+    & > p {
+      color: transparent;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      background: $gradient-primary border-box;
+      -webkit-mask: linear-gradient($white 0 0) padding-box, linear-gradient($white 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &:hover {
+      border: none;
+      background: none;
+      background: $dark-blue;
+
+      p {
+        color: $white;
+      }
+
+      &::before {
+        inset: unset;
+      }
+
+      .btn__icon {
+        background-image: none;
+        background-color: $white;
+      }
+    }
+  }
+
+  &--tertiary {
+    color: $white;
+    border: 1px solid $white;
+
+    p {
+      color: $white;
+    }
+
+    &:hover {
+      border: 1px solid $dark-blue;
+
+      p {
+        color: $dark-blue;
+      }
+    }
+  }
+
+  &--lg {
+    padding: toRem(20) toRem(40);
+  }
+
+  &--md {
+    padding: toRem(16) toRem(32);
+  }
+
+  &--sm {
+    padding: toRem(12) toRem(24);
+  }
+}

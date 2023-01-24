@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: toRem(60);
+  font-family: 'Josefin Sans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(40);
+    line-height: 1.05;
+  }
+}
+
+h2 {
+  font-size: toRem(48);
+  font-family: 'Josefin Sans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(32);
+    line-height: 1;
+  }
+}
+
+h3 {
+  font-size: toRem(32);
+  font-family: 'Josefin Sans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(24);
+  }
+}
+
+h4 {
+  font-size: toRem(24);
+  font-family: 'Josefin Sans Bold';
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  @include media-breakpoint-down(sm) {
+    font-size: toRem(20);
+  }
+}
+
+p {
+  color: $subtext;
+}
+
+a {
+  text-decoration: none;
+}
+
+// For Pattern and Ornament on All Pages
+.pattern,
+.ornament {
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ornament {
+  position: absolute;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  filter: blur(150px);
+}
+
+.container {
+  padding: 0;
+
+  @include media-breakpoint-up(xl) {
+    max-width: 1100px !important;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(16);
+    text-align: center;
+    align-items: center;
+  }
+}
