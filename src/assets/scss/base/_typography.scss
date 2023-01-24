@@ -1,0 +1,74 @@
+.text-gradient-primary {
+  background: $gradient-primary-text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%;
+
+  animation: gradient-shine 3s linear infinite;
+}
+
+.text-xl {
+  font-size: toRem(24);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+
+  &--md {
+    font-family: 'Josefin Sans Medium';
+  }
+}
+
+.text-lg {
+  font-size: toRem(18);
+  letter-spacing: 0;
+  line-height: 1.35;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+}
+
+.text-md {
+  font-size: toRem(16);
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+
+  &--md {
+    font-family: 'Josefin Sans Medium';
+  }
+}
+
+.text-sm {
+  font-size: toRem(14);
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+
+  &--md {
+    font-family: 'Josefin Sans Medium';
+  }
+}
+
+.text-xs {
+  font-size: toRem(12);
+  letter-spacing: 0;
+  line-height: auto;
+  font-family: 'Josefin Sans Regular';
+
+  &--bold {
+    font-family: 'Josefin Sans Bold';
+  }
+}

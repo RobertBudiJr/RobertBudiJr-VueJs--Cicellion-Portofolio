@@ -1,0 +1,36 @@
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: toRem(4);
+  align-items: center;
+
+  a {
+    transition: all 0.2s;
+  }
+
+  .arrow {
+    width: 24px;
+    height: 24px;
+    background: $gradient-primary;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: all 0.2s;
+    border-radius: 50%;
+    mask-image: url('./src/assets/img/icons/arrow-right.svg');
+    -webkit-mask-image: url('./src/assets/img/icons/arrow-right.svg');
+  }
+
+  &:hover {
+    a {
+      color: $blue;
+    }
+
+    .arrow {
+      background: $blue;
+    }
+  }
+}
