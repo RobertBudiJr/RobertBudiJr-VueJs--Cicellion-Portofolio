@@ -39,7 +39,7 @@ export default {
         <textarea type="text" name="message" class="form-control" id="msgInput" rows="3" required></textarea>
       </div>
     </div>
-    <input type="submit" class="btn btn--primary btn--md" value="Send Message" v-motion-slide-visible-once-bottom />
+    <input type="submit" class="btn btn--primary btn--md" value="Send Message" v-motion-fade-visible-once />
   </form>
 </template>
 
