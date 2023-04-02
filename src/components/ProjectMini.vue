@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue';
 
+import project1 from '../assets/img/project1.png';
+import project2 from '../assets/img/project2.png';
+
 defineProps({
   project: String,
   project2: String,
@@ -8,13 +11,13 @@ defineProps({
 
 const projectList = ref([
   {
-    img: './src/assets/img/project1.png',
+    img: project1,
     name: 'Kuliwisata.id',
     desc: 'Kuliwisata.id is a web application which function is to explore culinary and tourism in Bali, Indonesia. Made by native HTML, CSS, and JS.',
     url: 'https://github.com/RobertBudiJr/Kuliwisata.id',
   },
   {
-    img: './src/assets/img/project2.png',
+    img: project2,
     name: 'Ingfo.id',
     desc: 'Ingfo.id is an web application which main function is to provide information about Coivd-19 vaccinations. Made by native HTML, CSS, and JS.',
     url: 'https://github.com/RobertBudiJr/ingfo.id',
@@ -69,11 +72,6 @@ const projectList2 = ref([
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="hidden" style="display: none">
-    <img src="../assets/img/project1.png" alt="" />
-    <img src="../assets/img/project2.png" alt="" />
   </div>
 </template>
 
