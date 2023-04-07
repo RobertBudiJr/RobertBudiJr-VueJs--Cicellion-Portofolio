@@ -1,72 +1,55 @@
-<script setup>
-import { ref } from 'vue';
+<!-- <script setup>
+// import VLazyImage from 'v-lazy-image';
+</script> -->
 
-import project1 from '../assets/img/project1.png';
-import project2 from '../assets/img/project2.png';
+<script>
+import { useProjectStore } from '@/store/projects';
+// import VLazyImage from 'v-lazy-image';
 
-defineProps({
-  project: String,
-  project2: String,
-});
+export default {
+  setup() {
+    const projectStore = useProjectStore();
 
-const projectList = ref([
-  {
-    img: project1,
-    name: 'Kuliwisata.id',
-    desc: 'Kuliwisata.id is a web application which function is to explore culinary and tourism in Bali, Indonesia. Made by native HTML, CSS, and JS.',
-    url: 'https://github.com/RobertBudiJr/Kuliwisata.id',
+    return {
+      dataProject: projectStore.data,
+      dataProject2: projectStore.data2,
+    };
   },
-  {
-    img: project2,
-    name: 'Ingfo.id',
-    desc: 'Ingfo.id is an web application which main function is to provide information about Coivd-19 vaccinations. Made by native HTML, CSS, and JS.',
-    url: 'https://github.com/RobertBudiJr/ingfo.id',
-  },
-]);
-
-const projectList2 = ref([
-  {
-    name: 'Natours',
-    desc: 'Natours is a web application about tour booking. This app is made as study case to learn Saas, HTML, and JS. And to practice various amazing hover effects.',
-    url: 'https://github.com/RobertBudiJr/LatFrontEnd-Natours',
-  },
-  {
-    name: 'Meme Generator',
-    desc: 'Based on its name, Meme Generator is a web application which generate meme randomly based on data i provide. Made by React JS as study case.',
-    url: 'https://github.com/RobertBudiJr/ReactJs-ThirdProject',
-  },
-]);
+  // components: {
+  //   VLazyImage,
+  // },
+};
 </script>
 
 <template>
   <div class="row g-1 project-list">
-    <div class="col-md-12" v-for="project in projectList" v-bind:key="project.id">
+    <div class="col-md-12 list-big" v-for="item in dataProject" v-bind:key="item.id">
       <div class="card card--big" v-motion-fade-visible>
         <div class="left">
           <div class="left__text">
-            <h3>{{ project.name }}</h3>
-            <p class="text-md">{{ project.desc }}</p>
+            <h3>{{ item.name }}</h3>
+            <p class="text-md">{{ item.desc }}</p>
           </div>
           <div class="left__btn">
-            <a :href="project.url" class="btn btn--sm btn--tertiary" target="_blank">
+            <a :href="item.url" class="btn btn--sm btn--tertiary" target="_blank">
               <p>Source Code</p>
             </a>
           </div>
         </div>
-
         <div class="right">
-          <img :src="project.img" alt="" class="right__img" />
+          <img class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.imgUnload" :src-placeholder="item.img" :alt="item.name" />
+          <!-- <v-lazy-image class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.imgUnload" :src-placeholder="item.img" :alt="item.name" /> -->
         </div>
       </div>
     </div>
-    <div class="col-md-6" v-for="project2 in projectList2" v-bind:key="project2.id">
+    <div class="col-md-6 list-small" v-for="item2 in dataProject2" v-bind:key="item2.id">
       <div class="card card--small" v-motion-fade-visible>
         <div class="text">
-          <h3>{{ project2.name }}</h3>
-          <p class="text-md">{{ project2.desc }}</p>
+          <h3>{{ item2.name }}</h3>
+          <p class="text-md">{{ item2.desc }}</p>
         </div>
         <div class="btn-wrap">
-          <a :href="project2.url" class="btn btn--sm btn--tertiary" target="_blank">
+          <a :href="item2.url" class="btn btn--sm btn--tertiary" target="_blank">
             <p>Source Code</p>
           </a>
         </div>
@@ -76,11 +59,24 @@ const projectList2 = ref([
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 
 .project-list {
   --bs-gutter-x: 20px;
   --bs-gutter-y: 20px;
+
+  .list-big:nth-child(-n + 2) {
+    display: none;
+  }
+  .list-small:nth-last-child(-n + 6) {
+    display: none;
+  }
+
+  .list-big:nth-child(even) {
+    .card--big {
+      flex-direction: row-reverse;
+    }
+  }
 
   .card {
     background-color: transparent;
@@ -98,7 +94,7 @@ const projectList2 = ref([
       align-items: center;
 
       @include media-breakpoint-down(lg) {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
         justify-content: unset;
       }
 
@@ -137,6 +133,8 @@ const projectList2 = ref([
         overflow: hidden;
         margin-top: -24px;
         margin-bottom: -24px;
+        display: flex;
+        gap: toRem(20);
 
         @include media-breakpoint-down(lg) {
           width: 100%;
@@ -150,8 +148,14 @@ const projectList2 = ref([
         }
 
         img {
-          width: auto;
-          height: 100%;
+          width: 50%;
+          height: auto;
+          object-fit: cover;
+          object-position: center top;
+        }
+
+        img:nth-child(2) {
+          object-position: center bottom;
         }
       }
     }
