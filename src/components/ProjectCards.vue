@@ -1,10 +1,6 @@
-<!-- <script setup>
-// import VLazyImage from 'v-lazy-image';
-</script> -->
-
 <script>
 import { useProjectStore } from '@/store/projects';
-// import VLazyImage from 'v-lazy-image';
+import VLazyImage from 'v-lazy-image';
 
 export default {
   setup() {
@@ -15,14 +11,20 @@ export default {
       dataProject2: projectStore.data2,
     };
   },
-  // components: {
-  //   VLazyImage,
-  // },
+  props: {
+    classProp: {
+      type: String,
+      default: '',
+    },
+  },
+  components: {
+    VLazyImage,
+  },
 };
 </script>
 
 <template>
-  <div class="row g-1 project-list">
+  <div class="row g-1 project-list" :class="classProp">
     <div class="col-md-12 list-big" v-for="item in dataProject" v-bind:key="item.id">
       <div class="card card--big" v-motion-fade-visible>
         <div class="left">
@@ -37,8 +39,8 @@ export default {
           </div>
         </div>
         <div class="right">
-          <img class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.imgUnload" :src-placeholder="item.img" :alt="item.name" />
-          <!-- <v-lazy-image class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.imgUnload" :src-placeholder="item.img" :alt="item.name" /> -->
+          <!-- <img class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.imgUnload" :src-placeholder="item.img" :alt="item.name" /> -->
+          <v-lazy-image class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.img" :src-placeholder="item.imgUnload" :alt="item.name" />
         </div>
       </div>
     </div>
@@ -65,16 +67,18 @@ export default {
   --bs-gutter-x: 20px;
   --bs-gutter-y: 20px;
 
-  .list-big:nth-child(-n + 2) {
-    display: none;
-  }
-  .list-small:nth-last-child(-n + 6) {
-    display: none;
-  }
+  &--short {
+    .list-big:nth-child(-n + 2) {
+      display: none;
+    }
+    .list-small:nth-last-child(-n + 6) {
+      display: none;
+    }
 
-  .list-big:nth-child(even) {
-    .card--big {
-      flex-direction: row-reverse;
+    .list-big:nth-child(even) {
+      .card--big {
+        flex-direction: row-reverse;
+      }
     }
   }
 
@@ -141,6 +145,7 @@ export default {
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-bottom: 0;
         }
 
         @include media-breakpoint-down(md) {
@@ -165,6 +170,8 @@ export default {
       flex-direction: column;
       gap: toRem(24);
       padding: toRem(24);
+      height: 100%;
+      justify-content: space-between;
 
       .text {
         display: flex;
