@@ -19,7 +19,7 @@ const skillList = ref([{ name: 'Vue JS' }, { name: 'HTML5' }, { name: 'CSS' }, {
 </template>
 
 <style lang="scss">
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 
 .label-wrap {
   --bs-gutter-x: 24px !important;

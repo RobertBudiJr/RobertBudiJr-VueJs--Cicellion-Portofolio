@@ -44,7 +44,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 
 form {
   max-width: 480px;

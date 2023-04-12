@@ -1,6 +1,6 @@
 <script setup>
-import HeaderTitle from '../components/HeaderTitle.vue';
-import ProjectMini from '../components/ProjectCards.vue';
+import HeaderTitle from '@/components/HeaderTitle.vue';
+import ProjectMini from '@/components/ProjectCards.vue';
 </script>
 
 <template>
@@ -26,7 +26,7 @@ import ProjectMini from '../components/ProjectCards.vue';
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 
 section.projects#projectSection {
   height: 1338px;

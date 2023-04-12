@@ -1,8 +1,8 @@
 <script setup>
-import SkillsLabel from '../components/SkillsLabel.vue';
-import HeaderTitle from '../components/HeaderTitle.vue';
+import SkillsLabel from '@/components/SkillsLabel.vue';
+import HeaderTitle from '@/components/HeaderTitle.vue';
 
-import profPic from '../assets/img/prof-pic.png';
+import profPic from '@/assets/img/prof-pic.png';
 </script>
 
 <template>
@@ -20,9 +20,12 @@ import profPic from '../assets/img/prof-pic.png';
           <div class="img-tablet">
             <img :src="profPic" alt="" />
           </div>
-          <p class="text-md">Junior front-end developer who have so much interest on website design and development. Also like learning a lot of new things, im currently learning a certain framework to work easier with web development.</p>
+          <p class="text-md">
+            Front-End Web Developer as my main focus. I am currently using ViteJS for a faster development server. I have applied and mastered the concept of coding by using the BEM (Block Element Modifier) system to simplify web
+            development in HTML and Sass. I can also write code neatly so that it facilitates teamwork. Have experience in Back-End Development using PHP, Laravel, MySQL.
+          </p>
         </div>
-        <a href="https://drive.google.com/file/d/1xUFNCAn7fC3WXRLXF3fTcQ3RbONHlmwe/view?usp=sharing" class="btn btn--primary btn--md left__btn" target="_blank" v-motion-slide-visible-once-bottom>Check My CV</a>
+        <a href="https://drive.google.com/file/d/1e0vK2SDdXlHJGCqA0y9v0IplzePVuOXR/view?usp=sharing" class="btn btn--primary btn--md left__btn" target="_blank" v-motion-slide-visible-once-bottom>Check My CV</a>
       </div>
 
       <div class="right">
@@ -34,7 +37,7 @@ import profPic from '../assets/img/prof-pic.png';
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 // Pattern Settings
 .pattern {
   .ornament__ellipse-1 {

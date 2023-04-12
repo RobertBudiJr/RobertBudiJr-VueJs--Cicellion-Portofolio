@@ -33,7 +33,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 
 // Pattern Settings
 .pattern {

@@ -1,6 +1,6 @@
 <script setup>
-import SkillsLabel from '../components/SkillsLabel.vue';
-import HeaderTitle from '../components/HeaderTitle.vue';
+import SkillsLabel from '@/components/SkillsLabel.vue';
+import HeaderTitle from '@/components/HeaderTitle.vue';
 </script>
 
 <template>
@@ -23,7 +23,7 @@ import HeaderTitle from '../components/HeaderTitle.vue';
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 section.skills#skillsSection {
   height: auto;
 

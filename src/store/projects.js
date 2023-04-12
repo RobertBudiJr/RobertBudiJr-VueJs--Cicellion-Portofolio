@@ -1,14 +1,14 @@
 import { defineStore } from 'pinia';
 
-import project1 from '../assets/img/project1.png';
-import project2 from '../assets/img/project2.png';
-import project3 from '../assets/img/project3.png';
-import project4 from '../assets/img/project4.png';
+import project1 from '@/assets/img/project1.png';
+import project2 from '@/assets/img/project2.png';
+import project3 from '@/assets/img/project3.png';
+import project4 from '@/assets/img/project4.png';
 
-import project1Unload from '../assets/img/project1-unload.png';
-import project2Unload from '../assets/img/project2-unload.png';
-import project3Unload from '../assets/img/project3-unload.png';
-import project4Unload from '../assets/img/project4-unload.png';
+import project1Unload from '@/assets/img/project1-unload.png';
+import project2Unload from '@/assets/img/project2-unload.png';
+import project3Unload from '@/assets/img/project3-unload.png';
+import project4Unload from '@/assets/img/project4-unload.png';
 
 export const useProjectStore = defineStore({
   id: 'projects',
