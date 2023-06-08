@@ -17,10 +17,9 @@ import ProjectLists from '@/components/ProjectCards.vue';
     <!-- Content -->
     <div class="container">
       <div class="header">
-        <a href="#" class="btn btn--back header__btn">
+        <router-link class="btn btn--back header__btn" to="/">
           <span class="arrow-left"></span>
-          <!-- <p>Back</p> -->
-        </a>
+        </router-link>
         <HeaderTitle titleMsg="Projects" />
       </div>
       <ProjectLists classProp="project-list" />

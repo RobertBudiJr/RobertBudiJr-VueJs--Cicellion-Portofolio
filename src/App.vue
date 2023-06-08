@@ -1,29 +1,7 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HeroSection from './sections/HeroSection.vue';
-import AboutSection from './sections/AboutSection.vue';
-import SkillsSection from './sections/SkillsSection.vue';
-import ProjectSection from './sections/ProjectSection.vue';
-import FormSection from './sections/FormSection.vue';
-import FooterSection from './sections/FooterSection.vue';
-
-import FullProjectSection from './sections/FullProjectSection.vue';
-
-import NotFoundSection from './sections/NotFoundSection.vue';
-</script>
-
 <template>
-  <!-- <HeroSection />
-  <AboutSection />
-  <SkillsSection />
-  <ProjectSection />
-  <FormSection />
-  <FooterSection /> -->
-
-  <FullProjectSection />
-  <!-- <NotFoundSection /> -->
-  <FooterSection />
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss">

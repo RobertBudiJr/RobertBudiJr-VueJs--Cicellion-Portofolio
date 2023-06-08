@@ -18,7 +18,7 @@
           <p class="text-md">Commander, I think we've lost.</p>
         </div>
       </div>
-      <a href="#" class="btn btn--lg btn--primary">Back to Home</a>
+      <router-link to="/" class="btn btn--lg btn--primary">Back to Home</router-link>
     </div>
   </section>
   <!-- End 404 Page -->

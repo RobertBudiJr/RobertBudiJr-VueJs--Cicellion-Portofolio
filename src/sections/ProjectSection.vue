@@ -18,9 +18,9 @@ import ProjectLists from '@/components/ProjectCards.vue';
         <p class="text-md" v-motion-slide-visible-once-top>These are some samples of the work I've done so far.</p>
       </div>
       <ProjectLists classProp="project-list--short" />
-      <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="btn btn--md btn--tertiary" target="_blank" v-motion-slide-visible-once-bottom>
+      <router-link class="btn btn--md btn--tertiary" v-motion-slide-visible-once-bottom to="/project">
         <p>See More</p>
-      </a>
+      </router-link>
     </div>
   </section>
   <!-- End Section Projects -->
