@@ -9,6 +9,9 @@ import ProjectLists from '@/components/ProjectCards.vue';
     <!-- Pattern Group -->
     <div class="pattern">
       <div class="ornament ornament__ellipse-1"></div>
+      <div class="ornament ornament__ellipse-2"></div>
+      <div class="ornament ornament__ellipse-3"></div>
+      <div class="ornament ornament__ellipse-4"></div>
     </div>
 
     <!-- Content -->
@@ -31,7 +34,39 @@ import ProjectLists from '@/components/ProjectCards.vue';
 
 section.full-projects#fullProjectsSection {
   height: auto;
+  .pattern {
+    .ornament__ellipse-1 {
+      width: 400px;
+      height: 400px;
+      left: -286px;
+      top: 0px;
+      background: #0354e2;
+    }
 
+    .ornament__ellipse-2 {
+      width: 300px;
+      height: 300px;
+      right: -100px;
+      top: 637px;
+      background: #5d008a;
+    }
+
+    .ornament__ellipse-3 {
+      width: 200px;
+      height: 200px;
+      left: -186px;
+      bottom: 600px;
+      background: #0354e2;
+    }
+
+    .ornament__ellipse-4 {
+      width: 500px;
+      height: 500px;
+      right: -350px;
+      bottom: -100px;
+      background: #0354e2;
+    }
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -49,12 +84,6 @@ section.full-projects#fullProjectsSection {
       align-items: center;
       justify-content: flex-start;
       width: 100%;
-      //   position: relative;
-
-      //   &__btn {
-      //     align-self: flex-start;
-      //     float: left;
-      //   }
     }
   }
 }

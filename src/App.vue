@@ -10,7 +10,7 @@ import FooterSection from './sections/FooterSection.vue';
 
 import FullProjectSection from './sections/FullProjectSection.vue';
 
-// import NotFoundSection from './sections/NotFoundSection.vue';
+import NotFoundSection from './sections/NotFoundSection.vue';
 </script>
 
 <template>
