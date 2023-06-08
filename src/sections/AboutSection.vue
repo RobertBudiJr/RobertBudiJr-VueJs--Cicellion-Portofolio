@@ -1,8 +1,9 @@
 <script setup>
-import SkillsLabel from '@/components/SkillsLabel.vue';
 import HeaderTitle from '@/components/HeaderTitle.vue';
-
+import profPicUnload from '@/assets/img/prof-pic-unload.png';
 import profPic from '@/assets/img/prof-pic.png';
+
+import VLazyImage from 'v-lazy-image';
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import profPic from '@/assets/img/prof-pic.png';
         <div class="left__text" v-motion-slide-visible-once-left>
           <HeaderTitle titleMsg="About Me" />
           <div class="img-tablet">
-            <img :src="profPic" alt="" />
+            <v-lazy-image :src="profPic" :src-placeholder="profPicUnload" alt="Profile Picture" />
           </div>
           <p class="text-md">
             Front-End Web Developer as my main focus. I am currently using ViteJS for a faster development server. I have applied and mastered the concept of coding by using the BEM (Block Element Modifier) system to simplify web

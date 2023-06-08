@@ -1,6 +1,6 @@
 <script setup>
 import HeaderTitle from '@/components/HeaderTitle.vue';
-import ProjectMini from '@/components/ProjectCards.vue';
+import ProjectLists from '@/components/ProjectCards.vue';
 </script>
 
 <template>
@@ -11,12 +11,13 @@ import ProjectMini from '@/components/ProjectCards.vue';
       <div class="ornament ornament__ellipse-1"></div>
     </div>
 
+    <!-- Content -->
     <div class="container">
       <div class="header">
         <HeaderTitle titleMsg="Projects" />
         <p class="text-md" v-motion-slide-visible-once-top>These are some samples of the work I've done so far.</p>
       </div>
-      <ProjectMini classProp="project-list--short" />
+      <ProjectLists classProp="project-list--short" />
       <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="btn btn--md btn--tertiary" target="_blank" v-motion-slide-visible-once-bottom>
         <p>See More</p>
       </a>

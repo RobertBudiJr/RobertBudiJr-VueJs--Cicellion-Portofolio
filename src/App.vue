@@ -7,14 +7,22 @@ import SkillsSection from './sections/SkillsSection.vue';
 import ProjectSection from './sections/ProjectSection.vue';
 import FormSection from './sections/FormSection.vue';
 import FooterSection from './sections/FooterSection.vue';
+
+import FullProjectSection from './sections/FullProjectSection.vue';
+
+// import NotFoundSection from './sections/NotFoundSection.vue';
 </script>
 
 <template>
-  <HeroSection />
+  <!-- <HeroSection />
   <AboutSection />
   <SkillsSection />
   <ProjectSection />
   <FormSection />
+  <FooterSection /> -->
+
+  <FullProjectSection />
+  <!-- <NotFoundSection /> -->
   <FooterSection />
 </template>
 

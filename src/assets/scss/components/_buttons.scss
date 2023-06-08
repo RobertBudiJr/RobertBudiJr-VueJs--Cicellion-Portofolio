@@ -84,6 +84,29 @@
     }
   }
 
+  &--back {
+    padding: toRem(16);
+    border-radius: 50%;
+    background-color: transparent;
+
+    span.arrow-left {
+      width: 24px;
+      aspect-ratio: 1 / 1;
+      background-image: url(../assets/img/icons/arrow-left.svg);
+      background-size: cover;
+      background-position: center;
+      z-index: 2;
+    }
+
+    &:hover {
+      background-color: $white;
+
+      span.arrow-left {
+        background-image: url(../assets/img/icons/arrow-left-hover.svg);
+      }
+    }
+  }
+
   &--lg {
     padding: toRem(20) toRem(40);
   }

@@ -22,7 +22,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 item" v-motion-fade-visible-once>
           <p class="text-lg text-lg-bold">See my other portofolio as :</p>
-          <a href="#" class="text-md">Digital Artist</a>
+          <a href="https://www.pixiv.net/en/users/90740726" target="_blank" class="text-md">Digital Artist</a>
         </div>
       </div>
       <div class="footer__copyright" v-motion-pop-visible>
