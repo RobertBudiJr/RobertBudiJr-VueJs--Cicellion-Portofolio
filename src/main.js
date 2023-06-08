@@ -1,8 +1,6 @@
 import { createApp } from 'vue';
 import { MotionPlugin } from '@vueuse/motion';
 import { createPinia } from 'pinia';
-// import { VueRouter } from 'vue-router';
-// import routes from './router/routes';
 
 import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -22,6 +20,13 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
 
 const app = createApp(App);
@@ -30,11 +35,5 @@ app.use(MotionPlugin);
 app.use(createPinia());
 app.use(router);
 app.mount('#app');
-
-// const router = new VueRouter({
-//   routes,
-// });
-
-// export default router;
 
 import 'bootstrap/dist/js/bootstrap.js';

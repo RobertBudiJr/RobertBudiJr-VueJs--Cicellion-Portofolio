@@ -1,11 +1,23 @@
+<script>
+import ScrollToTop from '@/components/ScrollToTop.vue';
+
+export default {
+  name: 'App',
+  components: {
+    ScrollToTop,
+  },
+};
+</script>
+
 <template>
   <div id="app">
     <router-view></router-view>
+    <ScrollToTop />
   </div>
 </template>
 
 <style lang="scss">
-@import './assets/scss/styles.scss';
+@import '@/assets/scss/styles.scss';
 
 #app {
   background-color: $black;
