@@ -39,7 +39,6 @@ export default {
           </div>
         </div>
         <div class="right">
-          <!-- <img class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.imgUnload" :src-placeholder="item.img" :alt="item.name" /> -->
           <v-lazy-image class="right__img right__img--up" v-for="index in 2" :key="index" :src="item.img" :src-placeholder="item.imgUnload" :alt="item.name" />
         </div>
       </div>
@@ -187,7 +186,7 @@ export default {
     }
   }
 
-  :nth-child(2) {
+  .list-big:nth-child(even) {
     > * {
       flex-direction: row-reverse;
 

@@ -35,127 +35,129 @@
 <style lang="scss" scoped>
 @import '@/assets/scss/styles.scss';
 
-// Pattern Settings
-.pattern {
-  .ornament__ellipse-1 {
-    width: 497px;
-    height: 497px;
-    left: -242px;
-    top: -248px;
-    background: #5d008a;
-  }
+section.hero#heroSection {
+  // Pattern Settings
+  .pattern {
+    .ornament__ellipse-1 {
+      width: 497px;
+      height: 497px;
+      left: -242px;
+      top: -248px;
+      background: #5d008a;
+    }
 
-  .ornament__ellipse-2 {
-    width: 784px;
-    height: 784px;
-    left: 1048px;
-    top: calc(50% - 784px / 2);
-    background: #0354e2;
+    .ornament__ellipse-2 {
+      width: 784px;
+      height: 784px;
+      left: 1048px;
+      top: calc(50% - 784px / 2);
+      background: #0354e2;
+    }
   }
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  @include media-breakpoint-down(md) {
-    flex-direction: column;
-    justify-content: center;
-    gap: toRem(56);
-    text-align: center;
-  }
-
-  @include media-breakpoint-down(sm) {
-    margin-top: toRem(80);
-  }
-
-  .left {
+  .container {
     display: flex;
-    flex-direction: column;
-    gap: toRem(32);
-    align-items: flex-start;
-
-    @include media-breakpoint-down(md) {
-      align-items: center;
-    }
-
-    .text {
-      display: flex;
-      flex-direction: column;
-      gap: toRem(8);
-    }
-
-    .btn-container {
-      display: flex;
-      flex-direction: row;
-      gap: toRem(16);
-
-      @include media-breakpoint-down(md) {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      & > * {
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .right {
-    display: flex;
-    flex-direction: column;
-    gap: toRem(8);
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
     @include media-breakpoint-down(md) {
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: center;
+      gap: toRem(56);
+      text-align: center;
     }
-    .line-v-separator {
-      width: 1px;
-      height: 32px;
-      background-color: $white;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: toRem(80);
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(32);
+      align-items: flex-start;
 
       @include media-breakpoint-down(md) {
-        height: 1px;
-        width: 32px;
+        align-items: center;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(8);
+      }
+
+      .btn-container {
+        display: flex;
+        flex-direction: row;
+        gap: toRem(16);
+
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        & > * {
+          @include media-breakpoint-down(md) {
+            width: 100%;
+          }
+        }
       }
     }
 
-    .icon {
-      width: 32px;
-      height: 32px;
-      background-color: $grey;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      -webkit-mask-position: center;
-      mask-position: center;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      transition: all 0.2s;
-      border-radius: 50%;
-      cursor: pointer;
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(8);
+      align-items: center;
 
-      &:hover {
+      @include media-breakpoint-down(md) {
+        flex-direction: row;
+      }
+      .line-v-separator {
+        width: 1px;
+        height: 32px;
         background-color: $white;
-        transform: scale(1.1);
+
+        @include media-breakpoint-down(md) {
+          height: 1px;
+          width: 32px;
+        }
       }
 
-      &--github {
-        mask-image: url('../assets/img/icons/logo-github.svg');
-        -webkit-mask-image: url('../assets/img/icons/logo-github.svg');
-      }
+      .icon {
+        width: 32px;
+        height: 32px;
+        background-color: $grey;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        transition: all 0.2s;
+        border-radius: 50%;
+        cursor: pointer;
 
-      &--instagram {
-        mask-image: url('../assets/img/icons/logo-instagram.svg');
-        -webkit-mask-image: url('../assets/img/icons/logo-instagram.svg');
-      }
+        &:hover {
+          background-color: $white;
+          transform: scale(1.1);
+        }
 
-      &--linkedin {
-        mask-image: url('../assets/img/icons/logo-linkedin.svg');
-        -webkit-mask-image: url('../assets/img/icons/logo-linkedin.svg');
+        &--github {
+          mask-image: url('../assets/img/icons/logo-github.svg');
+          -webkit-mask-image: url('../assets/img/icons/logo-github.svg');
+        }
+
+        &--instagram {
+          mask-image: url('../assets/img/icons/logo-instagram.svg');
+          -webkit-mask-image: url('../assets/img/icons/logo-instagram.svg');
+        }
+
+        &--linkedin {
+          mask-image: url('../assets/img/icons/logo-linkedin.svg');
+          -webkit-mask-image: url('../assets/img/icons/logo-linkedin.svg');
+        }
       }
     }
   }

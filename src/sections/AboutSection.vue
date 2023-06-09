@@ -30,7 +30,7 @@ import VLazyImage from 'v-lazy-image';
       </div>
 
       <div class="right">
-        <img :src="profPic" alt="" v-motion-slide-visible-once-right />
+        <v-lazy-image :src="profPic" :src-placeholder="profPicUnload" alt="Profile Picture" v-motion-slide-visible-once-right />
       </div>
     </div>
   </section>
@@ -39,95 +39,98 @@ import VLazyImage from 'v-lazy-image';
 
 <style lang="scss" scoped>
 @import '@/assets/scss/styles.scss';
-// Pattern Settings
-.pattern {
-  .ornament__ellipse-1 {
-    width: 580px;
-    height: 580px;
-    left: -290px;
-    top: 46px;
-    background: #5d008a;
-  }
-}
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  @include media-breakpoint-down(md) {
-    flex-direction: column;
-    gap: toRem(56);
+section.about#aboutSection {
+  // Pattern Settings
+  .pattern {
+    .ornament__ellipse-1 {
+      width: 580px;
+      height: 580px;
+      left: -290px;
+      top: 46px;
+      background: #5d008a;
+    }
   }
-
-  img {
-    border-radius: 10px;
-  }
-
-  .left {
-    max-width: 396px;
+  .container {
     display: flex;
-    flex-direction: column;
-    gap: toRem(32);
+    justify-content: space-between;
+    align-items: center;
 
     @include media-breakpoint-down(md) {
-      max-width: 100%;
-      align-items: center;
-      text-align: center;
-    }
-
-    &__text {
-      display: flex;
       flex-direction: column;
-      gap: toRem(16);
-
-      @include media-breakpoint-down(md) {
-        gap: toRem(56);
-        align-items: center;
-      }
-
-      @include media-breakpoint-down(xs-2) {
-        gap: toRem(32);
-      }
-
-      .img-tablet {
-        width: 100%;
-
-        @include media-breakpoint-up(md) {
-          display: none;
-        }
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
+      gap: toRem(56);
     }
-
-    &__btn {
-      width: fit-content;
-
-      @include media-breakpoint-down(xs-2) {
-        width: 100%;
-      }
-    }
-  }
-
-  .right {
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     img {
-      width: auto;
-      height: 400px;
+      border-radius: 10px;
     }
 
-    @include media-breakpoint-down(md) {
-      display: none;
+    .left {
+      max-width: 396px;
+      display: flex;
+      flex-direction: column;
+      gap: toRem(32);
+
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(16);
+
+        @include media-breakpoint-down(md) {
+          gap: toRem(56);
+          align-items: center;
+        }
+
+        @include media-breakpoint-down(xs-2) {
+          gap: toRem(32);
+        }
+
+        .img-tablet {
+          width: 100%;
+
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      &__btn {
+        width: fit-content;
+
+        @include media-breakpoint-down(xs-2) {
+          width: 100%;
+        }
+      }
+    }
+
+    .right {
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: 400px;
+      }
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 }

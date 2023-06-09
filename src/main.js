@@ -6,7 +6,7 @@ import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/scss/styles.scss';
 
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import Home from '@/layouts/HomeLayout.vue';
 import Project from '@/layouts/ProjectLayout.vue';
 import NotFound from '@/layouts/NotFoundLayout.vue';
@@ -18,10 +18,19 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
+    // Handle anchor links
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      };
+    }
+    // Scroll to top for other routes
+    else if (savedPosition) {
       return savedPosition;
     } else {
       return { top: 0 };

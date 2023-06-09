@@ -24,32 +24,38 @@ import ContactForm from '@/components/ContactForm.vue';
 
 <style lang="scss" scoped>
 @import '@/assets/scss/styles.scss';
-// Pattern Settings
-.pattern {
-  .ornament__ellipse-1 {
-    width: 581px;
-    height: 581px;
-    left: 1068px;
-    top: 348px;
-    background: #5d008a;
-  }
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: toRem(64);
-  align-items: center;
 
-  @include media-breakpoint-down(md) {
-    gap: toRem(56);
-  }
+section.form#formSection {
+  min-height: 800px;
+  height: auto;
 
-  .header {
+  // Pattern Settings
+  .pattern {
+    .ornament__ellipse-1 {
+      width: 581px;
+      height: 581px;
+      left: 1068px;
+      top: 348px;
+      background: #5d008a;
+    }
+  }
+  .container {
     display: flex;
     flex-direction: column;
-    gap: toRem(20);
-    text-align: center;
+    gap: toRem(64);
     align-items: center;
+
+    @include media-breakpoint-down(md) {
+      gap: toRem(56);
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+      text-align: center;
+      align-items: center;
+    }
   }
 }
 </style>
