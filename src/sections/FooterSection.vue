@@ -6,7 +6,7 @@
         <div class="col-lg-4 col-sm-6 item item--lg">
           <div class="text-wrap item" v-motion-fade-visible-once>
             <h1>Cicellion.</h1>
-            <p class="text-md">This website is still under development, sorry for the inconvenience while experiencing this website.</p>
+            <p class="text-md">This website is still not perfect, sorry for the inconvenience while experiencing this website.</p>
           </div>
           <div class="socials">
             <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></a>
