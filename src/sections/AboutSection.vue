@@ -22,8 +22,9 @@ import VLazyImage from 'v-lazy-image';
             <v-lazy-image :src="profPic" :src-placeholder="profPicUnload" alt="Profile Picture" />
           </div>
           <p class="text-md">
-            Front-End Web Developer as my main focus. I am currently using ViteJS for a faster development server. I have applied and mastered the concept of coding by using the BEM (Block Element Modifier) system to simplify web
-            development in HTML and Sass. I can also write code neatly so that it facilitates teamwork. Have experience in Back-End Development using PHP, Laravel, MySQL.
+            Have so much interest at web developer field, especially as a Front-End Web Developer. With current skill related to front-end web like HTML, CSS, Sass, VueJs. Currently I'm using Vite Js as build tool. Also, able to write code
+            neatly which made it easier for teamwork. Consistently doing work using gitlab, and then connect it to github for public repo. Able to work as a team and discuss a task as clearly as possible. Have experience in Back-End
+            Development using PHP, Laravel, MySQL.
           </p>
         </div>
         <a href="https://drive.google.com/file/d/1e0vK2SDdXlHJGCqA0y9v0IplzePVuOXR/view?usp=sharing" class="btn btn--primary btn--md left__btn" target="_blank" v-motion-slide-visible-once-bottom>Check My CV</a>
