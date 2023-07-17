@@ -4,11 +4,13 @@ import project1 from '@/assets/img/project1.png';
 import project2 from '@/assets/img/project2.png';
 import project3 from '@/assets/img/project3.png';
 import project4 from '@/assets/img/project4.png';
+import project5 from '@/assets/img/project5.png';
 
 import project1Unload from '@/assets/img/project1-unload.png';
 import project2Unload from '@/assets/img/project2-unload.png';
 import project3Unload from '@/assets/img/project3-unload.png';
 import project4Unload from '@/assets/img/project4-unload.png';
+import project5Unload from '@/assets/img/project5-unload.png';
 
 export const useProjectStore = defineStore({
   id: 'projects',
@@ -29,6 +31,13 @@ export const useProjectStore = defineStore({
         url: 'https://github.com/RobertBudiJr/HTML-CSS-JS--Ingfo.id',
       },
       {
+        img: project4,
+        imgUnload: project4Unload,
+        name: 'Kuliwisata.id V2',
+        desc: 'Kuliwisata.id V2 is website that provide information about Travel Destination, Food Culinary in Indonesia. Made by VueJs, Bootstrap 5, and SASS.',
+        url: 'https://github.com/RobertBudiJr/VueJs--Kuliwisata.id-V2',
+      },
+      {
         img: project3,
         imgUnload: project3Unload,
         name: 'Personal Portofolio',
@@ -36,11 +45,12 @@ export const useProjectStore = defineStore({
         url: 'https://github.com/RobertBudiJr/VueJs--Cicellion-Portofolio',
       },
       {
-        img: project4,
-        imgUnload: project4Unload,
-        name: 'Kuliwisata.id V2',
-        desc: 'Kuliwisata.id V2 is website that provide information about Travel Destination, Food Culinary in Indonesia. Made by VueJs, Bootstrap 5, and SASS.',
-        url: 'https://github.com/RobertBudiJr/VueJs--Kuliwisata.id-V2',
+        img: project5,
+        imgUnload: project5Unload,
+        name: `Ray's Personal Portofolio`,
+        desc: `Freelance project for client's personal portofolio website. Made by VueJs, Bootstrap 5, and SASS`,
+        isLive: true,
+        url: 'https://projectmu.id/',
       },
     ],
     data2: [

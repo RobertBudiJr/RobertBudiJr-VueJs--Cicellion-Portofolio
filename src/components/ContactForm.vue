@@ -32,7 +32,7 @@ export default {
       </div>
       <div class="form-group" v-motion-fade-visible-once>
         <label for="emailInput" class="form-label text-md">Email</label>
-        <input type="text" name="email" class="form-control" id="emailInput" placeholder="JohnDoe@mail.com" required />
+        <input type="text" name="email" class="form-control" id="emailInput" placeholder="johndoe@mail.com" required />
       </div>
       <div class="form-group" v-motion-fade-visible-once>
         <label for="msgInput" class="form-label text-md">Message</label>

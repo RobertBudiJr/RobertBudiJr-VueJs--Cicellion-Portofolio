@@ -33,7 +33,10 @@ export default {
             <p class="text-md">{{ item.desc }}</p>
           </div>
           <div class="left__btn">
-            <a :href="item.url" class="btn btn--sm btn--tertiary" target="_blank">
+            <a v-if="item.isLive" :href="item.url" class="btn btn--sm btn--tertiary" target="_blank">
+              <p>See Live</p>
+            </a>
+            <a v-else :href="item.url" class="btn btn--sm btn--tertiary" target="_blank">
               <p>Source Code</p>
             </a>
           </div>
@@ -67,7 +70,7 @@ export default {
   --bs-gutter-y: 20px;
 
   &--short {
-    .list-big:nth-child(-n + 2) {
+    .list-big:nth-child(-n + 3) {
       display: none;
     }
     .list-small:nth-last-child(-n + 6) {
@@ -90,6 +93,7 @@ export default {
     align-items: flex-start;
     gap: toRem(24);
     padding: toRem(24);
+    // border: solid 1px rgba($dark-blue, 0.2);
 
     &--big {
       justify-content: space-between;

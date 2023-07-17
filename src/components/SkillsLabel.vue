@@ -5,7 +5,7 @@ defineProps({
   skill: String,
 });
 
-const skillList = ref([{ name: 'Vue JS' }, { name: 'HTML5' }, { name: 'CSS' }, { name: 'JavaScript' }, { name: 'Sass' }, { name: 'JQuery' }, { name: 'Git' }, { name: 'Java' }]);
+const skillList = ref([{ name: 'Vue JS' }, { name: 'HTML5' }, { name: 'CSS' }, { name: 'JavaScript' }, { name: 'Sass' }, { name: 'JQuery' }, { name: 'Git' }, { name: 'Webflow' }]);
 </script>
 
 <template>
