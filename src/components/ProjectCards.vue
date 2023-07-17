@@ -127,6 +127,7 @@ export default {
         }
 
         &__btn {
+          width: -moz-fit-content;
           width: fit-content;
 
           @include media-breakpoint-down(xs-2) {

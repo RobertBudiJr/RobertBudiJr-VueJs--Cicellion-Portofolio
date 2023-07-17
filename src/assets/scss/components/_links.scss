@@ -20,8 +20,8 @@
     mask-repeat: no-repeat;
     transition: all 0.2s;
     border-radius: 50%;
-    mask-image: url('./src/assets/img/icons/arrow-right.svg');
     -webkit-mask-image: url('./src/assets/img/icons/arrow-right.svg');
+    mask-image: url('./src/assets/img/icons/arrow-right.svg');
   }
 
   &:hover {

@@ -57,6 +57,7 @@ form {
   // Background Settings
   background: linear-gradient(151.84deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 20px;
 
