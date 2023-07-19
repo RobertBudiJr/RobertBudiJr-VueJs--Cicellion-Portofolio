@@ -5,13 +5,13 @@ import ProjectLists from '@/components/ProjectCards.vue';
 
 <template>
   <!-- Start Full Projects Section -->
-  <section class="full-projects" id="fullProjectsSection">
+  <kinesis-container tag="section" class="full-projects" id="fullProjectsSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
-      <div class="ornament ornament__ellipse-2"></div>
-      <div class="ornament ornament__ellipse-3"></div>
-      <div class="ornament ornament__ellipse-4"></div>
+      <kinesis-element :strength="75" axis="x" class="ornament ornament__ellipse-1"></kinesis-element>
+      <kinesis-element :strength="-50" axis="y" class="ornament ornament__ellipse-2"></kinesis-element>
+      <kinesis-element :strength="-75" axis="y" class="ornament ornament__ellipse-3"></kinesis-element>
+      <kinesis-element :strength="50" axis="x" class="ornament ornament__ellipse-4"></kinesis-element>
     </div>
 
     <!-- Content -->
@@ -24,7 +24,7 @@ import ProjectLists from '@/components/ProjectCards.vue';
       </div>
       <ProjectLists classProp="project-list" />
     </div>
-  </section>
+  </kinesis-container>
   <!-- End Full Projects Section -->
 </template>
 

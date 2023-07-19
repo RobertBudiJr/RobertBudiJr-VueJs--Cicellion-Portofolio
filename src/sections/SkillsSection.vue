@@ -5,10 +5,10 @@ import HeaderTitle from '@/components/HeaderTitle.vue';
 
 <template>
   <!-- Start Skills Section -->
-  <section class="skills" id="skillsSection">
+  <kinesis-container tag="section" class="skills" id="skillsSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
+      <kinesis-element :strength="100" axis="y" class="ornament ornament__ellipse-1"></kinesis-element>
     </div>
 
     <div class="container">
@@ -18,7 +18,7 @@ import HeaderTitle from '@/components/HeaderTitle.vue';
       </div>
       <SkillsLabel />
     </div>
-  </section>
+  </kinesis-container>
   <!-- End Skills Section -->
 </template>
 

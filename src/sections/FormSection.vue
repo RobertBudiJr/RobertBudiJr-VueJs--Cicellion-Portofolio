@@ -5,10 +5,10 @@ import ContactForm from '@/components/ContactForm.vue';
 
 <template>
   <!-- Start Form Section -->
-  <section class="form" id="formSection">
+  <kinesis-container tag="section" class="form" id="formSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
+      <kinesis-element :strength="75" axis="x" class="ornament ornament__ellipse-1"></kinesis-element>
     </div>
 
     <div class="container">
@@ -18,7 +18,7 @@ import ContactForm from '@/components/ContactForm.vue';
       </div>
       <ContactForm />
     </div>
-  </section>
+  </kinesis-container>
   <!-- End Form Section -->
 </template>
 

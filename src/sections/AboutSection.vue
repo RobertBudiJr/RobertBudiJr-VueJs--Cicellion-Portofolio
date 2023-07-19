@@ -8,10 +8,10 @@ import VLazyImage from 'v-lazy-image';
 
 <template>
   <!-- Start About Section -->
-  <section class="about" id="aboutSection">
+  <kinesis-container tag="section" class="about" id="aboutSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
+      <kinesis-element :strength="75" class="ornament ornament__ellipse-1"></kinesis-element>
     </div>
 
     <div class="container">
@@ -29,11 +29,11 @@ import VLazyImage from 'v-lazy-image';
         <a href="https://drive.google.com/file/d/1e0vK2SDdXlHJGCqA0y9v0IplzePVuOXR/view?usp=sharing" class="btn btn--primary btn--md left__btn" target="_blank" v-motion-slide-visible-once-bottom>Check My CV</a>
       </div>
 
-      <div class="right">
+      <kinesis-element :strength="-20" type="depth_inv" class="right">
         <v-lazy-image :src="profPic" :src-placeholder="profPicUnload" alt="Profile Picture" v-motion-slide-visible-once-right />
-      </div>
+      </kinesis-element>
     </div>
-  </section>
+  </kinesis-container>
   <!-- End About Section -->
 </template>
 

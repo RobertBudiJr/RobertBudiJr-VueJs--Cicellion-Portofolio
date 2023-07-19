@@ -1,6 +1,6 @@
 <template>
   <!-- Start Footer Section -->
-  <section class="footer" id="footerSection">
+  <kinesis-container tag="section" class="footer" id="footerSection">
     <div class="container">
       <div class="row g-1 footer__content">
         <div class="col-lg-4 col-sm-6 item item--lg">
@@ -9,9 +9,9 @@
             <p class="text-md">This website is still not perfect, sorry for the inconvenience while experiencing this website.</p>
           </div>
           <div class="socials">
-            <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></a>
-            <a href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></a>
-            <a href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></a>
+            <kinesis-element tag="a" :strength="10" type="rotate" href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></kinesis-element>
+            <kinesis-element tag="a" :strength="-9" type="rotate" href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></kinesis-element>
+            <kinesis-element tag="a" :strength="7" type="rotate" href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></kinesis-element>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 item" v-motion-fade-visible-once>
@@ -29,7 +29,7 @@
         <p class="text-md">&copy; Copyright 2022, All Rights Reserved by Cicellion</p>
       </div>
     </div>
-  </section>
+  </kinesis-container>
   <!-- End Footer Section -->
 </template>
 

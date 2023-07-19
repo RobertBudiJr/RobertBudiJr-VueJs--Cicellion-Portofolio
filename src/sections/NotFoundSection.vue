@@ -1,10 +1,10 @@
 <template>
   <!-- Start 404 Page -->
-  <section class="not-found" id="notFoundSection">
+  <kinesis-container tag="section" class="not-found" id="notFoundSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
-      <div class="ornament ornament__ellipse-2"></div>
+      <kinesis-element :strength="50" class="ornament ornament__ellipse-1"></kinesis-element>
+      <kinesis-element :strength="-50" class="ornament ornament__ellipse-2"></kinesis-element>
     </div>
 
     <!-- Content -->
@@ -14,13 +14,23 @@
           <h1 class="text-gradient-primary text-not-found">404</h1>
         </div>
         <div class="sub-text">
-          <h3>There's NOTHING Here..</h3>
+          <h3>
+            <span class="default-h3"> There's </span>
+            <kinesis-element tag="span" :strength="2">N</kinesis-element>
+            <kinesis-element tag="span" :strength="-2" type="rotate">O</kinesis-element>
+            <kinesis-element tag="span" :strength="-5">T</kinesis-element>
+            <kinesis-element tag="span" :strength="-1" type="scale">H</kinesis-element>
+            <kinesis-element tag="span" :strength="4" type="rotate">I</kinesis-element>
+            <kinesis-element tag="span" :strength="1" type="scale">N</kinesis-element>
+            <kinesis-element tag="span" :strength="-2">G</kinesis-element>
+            <span class="default-h3--left"> Here.. </span>
+          </h3>
           <p class="text-md">Commander, I think we've lost.</p>
         </div>
       </div>
       <router-link to="/" class="btn btn--lg btn--primary">Back to Home</router-link>
     </div>
-  </section>
+  </kinesis-container>
   <!-- End 404 Page -->
 </template>
 
@@ -73,6 +83,17 @@ section.not-found#notFoundSection {
       .sub-text {
         p {
           color: $grey;
+        }
+        h3 {
+          display: flex;
+          position: relative;
+          .default-h3 {
+            margin-right: toRem(8);
+
+            &--left {
+              margin-left: toRem(8);
+            }
+          }
         }
       }
     }

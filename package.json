@@ -16,6 +16,7 @@
     "pinia": "^2.0.33",
     "v-lazy-image": "^2.1.1",
     "vue": "^3.2.41",
+    "vue-kinesis": "^2.0.5",
     "vue-router": "^4.0.13"
   },
   "devDependencies": {

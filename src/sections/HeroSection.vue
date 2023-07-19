@@ -1,27 +1,6 @@
 <script>
 export default {
   methods: {
-    // handleScroll() {
-    //   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    //   const sections = ['hero', 'about', 'project', 'contact'];
-    //   let activeSection = '';
-
-    //   for (const section of sections) {
-    //     const element = document.getElementById(section);
-    //     if (element) {
-    //       const rect = element.getBoundingClientRect();
-    //       if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
-    //         activeSection = section;
-    //         break;
-    //       }
-    //     }
-    //   }
-
-    //   this.isFloating = scrollPosition > 0;
-    //   this.activeSection = activeSection;
-    // },
-
     async scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
 
@@ -52,17 +31,17 @@ export default {
 </script>
 <template>
   <!-- Start Hero Section -->
-  <section class="hero" id="heroSection">
+  <kinesis-container tag="section" class="hero" id="heroSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
-      <div class="ornament ornament__ellipse-2"></div>
+      <kinesis-element :strength="75" axis="x" class="ornament ornament__ellipse-1"></kinesis-element>
+      <kinesis-element :strength="50" axis="y" class="ornament ornament__ellipse-2"></kinesis-element>
     </div>
 
     <div class="container">
       <div class="left" v-motion-slide-left>
         <div class="text">
-          <h1>Hello! I am <span class="text-gradient-primary">Cicellion</span></h1>
+          <kinesis-element tag="h1" :strength="-3">Hello! I am <span class="text-gradient-primary">Cicellion</span></kinesis-element>
           <p class="text-lg">Front End Developer</p>
         </div>
         <div class="btn-container">
@@ -73,14 +52,14 @@ export default {
         </div>
       </div>
       <div class="right" v-motion-slide-right>
-        <a href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></a>
-        <div class="line-v-separator"></div>
-        <a href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></a>
-        <div class="line-v-separator"></div>
-        <a href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></a>
+        <kinesis-element tag="a" :strength="5" type="rotate" href="https://github.com/RobertBudiJr/RobertBudiJr" class="icon icon--github" target="_blank"></kinesis-element>
+        <kinesis-element :strength="-2" class="line-v-separator"></kinesis-element>
+        <kinesis-element tag="a" :strength="-5" type="rotate" href="https://www.instagram.com/cicellion_/" class="icon icon--instagram" target="_blank"></kinesis-element>
+        <kinesis-element :strength="2" class="line-v-separator"></kinesis-element>
+        <kinesis-element tag="a" :strength="7" type="rotate" href="https://www.linkedin.com/in/valenta-abram-nugraha-putra-440216238/" class="icon icon--linkedin" target="_blank"></kinesis-element>
       </div>
     </div>
-  </section>
+  </kinesis-container>
   <!-- End Hero Section -->
 </template>
 

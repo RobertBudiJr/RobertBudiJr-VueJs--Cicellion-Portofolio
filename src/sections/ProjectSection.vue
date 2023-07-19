@@ -5,10 +5,10 @@ import ProjectLists from '@/components/ProjectCards.vue';
 
 <template>
   <!-- Start Section Projects -->
-  <section class="projects" id="projectSection">
+  <kinesis-container tag="section" class="projects" id="projectSection">
     <!-- Pattern Group -->
     <div class="pattern">
-      <div class="ornament ornament__ellipse-1"></div>
+      <kinesis-element :strength="-50" class="ornament ornament__ellipse-1"></kinesis-element>
     </div>
 
     <!-- Content -->
@@ -22,7 +22,7 @@ import ProjectLists from '@/components/ProjectCards.vue';
         <p>See More</p>
       </router-link>
     </div>
-  </section>
+  </kinesis-container>
   <!-- End Section Projects -->
 </template>
 
