@@ -1,3 +1,55 @@
+<script>
+export default {
+  methods: {
+    // handleScroll() {
+    //   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    //   const sections = ['hero', 'about', 'project', 'contact'];
+    //   let activeSection = '';
+
+    //   for (const section of sections) {
+    //     const element = document.getElementById(section);
+    //     if (element) {
+    //       const rect = element.getBoundingClientRect();
+    //       if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+    //         activeSection = section;
+    //         break;
+    //       }
+    //     }
+    //   }
+
+    //   this.isFloating = scrollPosition > 0;
+    //   this.activeSection = activeSection;
+    // },
+
+    async scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+
+      if (element) {
+        // Scroll to the section with an offset after the content is loaded
+        const scrollWithOffset = () => {
+          const yOffset = 0; // Adjust this value to set the desired offset
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        };
+
+        if (document.readyState === 'complete') {
+          // If the document is already fully loaded, scroll immediately
+          scrollWithOffset();
+        } else {
+          // If the document is still loading, wait for the 'load' event
+          await new Promise((resolve) => {
+            window.addEventListener('load', resolve);
+          });
+
+          // Scroll after the document is fully loaded
+          scrollWithOffset();
+        }
+      }
+    },
+  },
+};
+</script>
 <template>
   <!-- Start Hero Section -->
   <section class="hero" id="heroSection">
@@ -14,10 +66,10 @@
           <p class="text-lg">Front End Developer</p>
         </div>
         <div class="btn-container">
-          <a href="#aboutSection" class="btn btn--primary btn--md">See What I Do</a>
-          <a href="#formSection" class="btn btn--tertiary btn--md">
+          <button class="btn btn--primary btn--md" @click="scrollToSection('aboutSection')">See What I Do</button>
+          <button class="btn btn--tertiary btn--md" @click="scrollToSection('formSection')">
             <p>Contact</p>
-          </a>
+          </button>
         </div>
       </div>
       <div class="right" v-motion-slide-right>
